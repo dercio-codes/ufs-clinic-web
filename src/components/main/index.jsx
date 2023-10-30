@@ -33,10 +33,10 @@ export const Main = () => {
               justifyContent: "space-evenly",
             }}
           >
-            <NavItem />
-            <MenuDrop />
-            <MenuDrop />
-            <MenuDrop />
+            <NavItem text={"Health Tips "} />
+            <NavItem text={"Campaigns"} />
+            <NavItem text={"About"} />
+            <NavItem text={"Login "} />
          
           </Grid>
         </Grid>
@@ -51,10 +51,10 @@ export const Main = () => {
 
         <Box sx={{ display:'flex' , justifyContent:'space-between' }} >
 
-            <CardItem text={"HIgh Blood Pressure"} />
-            <CardItem text={"HIV"} />
-            <CardItem text={"Diabetes"} />
-            <CardItem text={"Tubercolosis"} />
+            <CardItem image={"/blood-pressure.jpg"} text={"HIgh Blood Pressure"} />
+            <CardItem image={"/hiv.png"} text={"HIV"} />
+            <CardItem image={"/diabetes.jpg"} text={"Diabetes"} />
+            <CardItem image={"/tb.jpg"} text={"Tubercolosis"} />
             <CardItem text={"See All..."} />
 
         </Box>
@@ -71,20 +71,20 @@ export const Main = () => {
               padding:'115px 0'
             }}
           >
-            <Paper elevation={3} sx={{ "&:hover":{ background:'rgba(1,1,1,.2)' } , margin:'32px 0' , width:'100%' , height:'100px' , borderLeft:'10px solid blue' , display:'flex' , alignItems:'center' , justifyContent:'space-between' , padding:'0 21px' }} >
+            <Paper elevation={3} sx={{ "&:hover":{ cursor:'pointer', background:'rgba(1,1,1,.2)' } , margin:'32px 0' , width:'100%' , height:'100px' , borderLeft:'10px solid blue' , display:'flex' , alignItems:'center' , justifyContent:'space-between' , padding:'0 21px' }} >
 
                 <SearchIcon sx={{ fontSize:'35px' , color:'blue' }} />
                 <Typography sx={{  }} > Find a Nurse  </Typography>
                 <ArrowForwardIcon sx={{ color:'blue'}} />
 
             </Paper>
-             <Paper elevation={3} sx={{ "&:hover":{ background:'rgba(1,1,1,.2)' } , margin:'32px 0' , width:'100%' , height:'100px' , borderLeft:'10px solid blue' , display:'flex' , alignItems:'center' , justifyContent:'space-between' , padding:'0 21px' }} >
+             <Paper elevation={3} sx={{ "&:hover":{ cursor:'pointer', background:'rgba(1,1,1,.2)' } , margin:'32px 0' , width:'100%' , height:'100px' , borderLeft:'10px solid blue' , display:'flex' , alignItems:'center' , justifyContent:'space-between' , padding:'0 21px' }} >
                 <TipsAndUpdatesIcon sx={{ fontSize:'35px' , color:'blue' }} />
                 <Typography sx={{  }} > Tips  </Typography>
                 <ArrowForwardIcon sx={{ color:'blue'}} />
 
             </Paper>
-             <Paper elevation={3} sx={{ "&:hover":{ background:'rgba(1,1,1,.2)' } , margin:'32px 0' , width:'100%' , height:'100px' , borderLeft:'10px solid blue' , display:'flex' , alignItems:'center' , justifyContent:'space-between' , padding:'0 21px' }} >
+             <Paper elevation={3} sx={{ "&:hover":{ cursor:'pointer', background:'rgba(1,1,1,.2)' } , margin:'32px 0' , width:'100%' , height:'100px' , borderLeft:'10px solid blue' , display:'flex' , alignItems:'center' , justifyContent:'space-between' , padding:'0 21px' }} >
                 <CallIcon sx={{ fontSize:'35px' , color:'blue' }} />
                 <Typography sx={{  }} > Contact Us   </Typography>
                 <ArrowForwardIcon sx={{ color:'blue'}} />
@@ -93,15 +93,15 @@ export const Main = () => {
         </Grid>
 
         <Grid md={3.5} sx={{ margin:'32px auto 80px auto' , height:'350px' , background:'' }} >
-          <Box sx={{ height:'300px' , width:'100%' , backgroundImage: "url('/hero-8.png')" , backgroundSize:'cover' , backgroundPosition:'center' , backgroundRepeat:'no-repeat'  }} />
+          <Box sx={{ height:'300px' , width:'50%' , margin:'auto auto' , backgroundPosition:'center', backgroundImage: "url('/student-using.jpg')" , backgroundSize:'contain' , backgroundPosition:'center' , backgroundRepeat:'no-repeat'  }} />
           <Typography sx={{ textAlign:'center' }} > Access quickly to the availablility of all your practitioners </Typography>
         </Grid>
         <Grid md={3.5} sx={{ margin:'32px auto 80px auto' , height:'350px' , background:'' }} >
-          <Box sx={{ height:'300px' , width:'100%' , backgroundImage: "url('/hero-7.png')" , backgroundSize:'cover' , backgroundPosition:'center' , backgroundRepeat:'no-repeat'  }} />
+          <Box sx={{ height:'300px' , width:'50%' , margin:'auto auto' , backgroundPosition:'center', backgroundImage: "url('/practitioners.jpg')" , backgroundSize:'contain' , backgroundPosition:'center' , backgroundRepeat:'no-repeat'  }} />
           <Typography sx={{ textAlign:'center' }} > A company of practitioners to accompany you. </Typography>
         </Grid>
         <Grid md={3.5} sx={{ margin:'32px auto 80px auto' , height:'350px' , background:'' }} >
-          <Box sx={{ height:'300px' , width:'100%' , backgroundImage: "url('/hero-8.png')" , backgroundSize:'cover' , backgroundPosition:'center' , backgroundRepeat:'no-repeat'  }} />
+          <Box sx={{ height:'300px' , width:'50%' , margin:'auto auto' , backgroundPosition:'center', backgroundImage: "url('/appointment-booking.jpg')" , backgroundSize:'contain' , backgroundPosition:'center' , backgroundRepeat:'no-repeat'  }} />
           <Typography sx={{ textAlign:'center' }} > Manage your Appointments and get health tips as well. </Typography>
         </Grid>
         </Grid>
@@ -142,14 +142,14 @@ const MenuDrop = () => {
 
 const TitleHeader = ({text}) => {
   return(
- <Typography sx={{ fontSize:'34px' , fontWeight:'600' , margin:'32px 0' }} > {text} </Typography>
+ <Typography sx={{ fontSize:'34px' , fontWeight:'600' , margin:'32px 0' , color:GREEN }} > {text} </Typography>
     )
 } 
 
-const CardItem = ({text}) => {
+const CardItem = ({text , image}) => {
   return(
 <Box sx={{ width:'120px' }} >
-<Box sx={{ height:'120px' , width:'120px' , background:'yellow'}} />
+<Box sx={{ height:'120px' , width:'120px' , backgroundImage: `url('${image}')` , backgroundSize:'contain' , backgroundPosition:'center' , backgroundRepeat:'no-repeat'}} />
  <Typography sx={{ fontSize:'16px' , margin:'8px 0' , fontWeight:'600' , textAlign:'center' }} > {text} </Typography>
 
 </Box>
@@ -157,7 +157,7 @@ const CardItem = ({text}) => {
     )
 }
 
-function NavItem() {
+function NavItem({text}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -175,8 +175,9 @@ function NavItem() {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
+        sx={{ fontSize:'12px' , color:BLUE }}
       >
-        Dashboard
+        {text}
       </Button>
       <Menu
         id="basic-menu"
@@ -188,11 +189,24 @@ function NavItem() {
         }}
       >
         <Box 
-        sx={{ width:'800px' , height:'50vh' , background:'' }}
+        sx={{ width:'800px' , minHeight:'50vh' , background:'' }}
 
          >
+<Grid container>
+<Grid item xs={6}>
+          <img src="/poster-1.png" style={{ objectFit:'contain'  , width:'100%' , height:'100%' }} />
 
+</Grid>
+<Grid item xs={6} sx={{ display:'flex' , flexWrap:'wrap' }} >
+  <Typography sx={{ minHeight:'100px' , background:GREEN , width:'50%' , textAlign:'center' , margin:'0 auto' }} > HIV </Typography>
+  <Typography sx={{ minHeight:'100px' , background:BLUE , width:'50%' , textAlign:'center' , margin:'0 auto' }} > TB </Typography>
+  <Typography sx={{ minHeight:'100px' , background:GREEN , width:'50%' , textAlign:'center' , margin:'0 auto' }} > Gynercologist </Typography>
+  <Typography sx={{ minHeight:'100px' , background:BLUE , width:'50%' , textAlign:'center' , margin:'0 auto' }} > High Blood Pressure </Typography>
+  <Typography sx={{ minHeight:'100px' , background:GREEN , width:'50%' , textAlign:'center' , margin:'0 auto' }} > Flu </Typography>
+  <Typography sx={{ minHeight:'100px' , background:BLUE , width:'50%' , textAlign:'center' , margin:'0 auto' }} > Covid </Typography>
+</Grid>
 
+</Grid>
         </Box>
       </Menu>
     </div>
