@@ -1,16 +1,27 @@
-import React from "react";
-import { Box, Typography, Grid, Menu, Tooltip } from "@mui/material";
+import React, { useState, useEffect } from 'react';
+import { Box, Typography, Grid, Menu, Tooltip , Paper} from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Button from '@mui/material/Button';
+import MenuItem from '@mui/material/MenuItem';
+import SearchIcon from '@mui/icons-material/Search';
+import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
+import CallIcon from '@mui/icons-material/Call';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Carousel  from "./../carousel";
 
-const GREEN = "#"
+const GREEN = "#449842"
+const BLUE = "#001842"
+
 
 export const Main = () => {
+
+
   return (
     <Box>
       <Box sx={{ height: "5vh", background: "blue" }} />
       <Box sx={{ width: "90%", margin: "0 auto" }}>
         <Grid container>
-          <Grid item xs={2} sx={{ padding: "30px", backgroundImage: "url('/qwaqwa-logo.jpg')" , backgroundSize:'contain' , backgroundPosition:'left' }}></Grid>
+          <Grid item xs={2} sx={{ padding: "30px", backgroundImage: "url('/qwaqwa-logo.jpg')" , backgroundSize:'contain' , backgroundPosition:'left' , backgroundRepeat:'no-repeat' }}></Grid>
           <Grid
             item
             xs={10}
@@ -22,7 +33,7 @@ export const Main = () => {
               justifyContent: "space-evenly",
             }}
           >
-            <MenuDrop />
+            <NavItem />
             <MenuDrop />
             <MenuDrop />
             <MenuDrop />
@@ -34,47 +45,76 @@ export const Main = () => {
 
 
       <Box sx={{ width: "90%", margin: "0 auto" }}>
-<Grid container>
+<Grid container columnSpacing={6} >
           <Grid item xs={9} sx={{ padding: "30px", background: "" }}>
         <TitleHeader text={"Qwa Qwa Clinic Wellness "}/>
 
         <Box sx={{ display:'flex' , justifyContent:'space-between' }} >
 
-<CardItem text={"HIgh Blood Pressure"} />
-<CardItem text={"HIV"} />
-<CardItem text={"Diabetes"} />
-<CardItem text={"Tubercolosis"} />
-<CardItem text={"See All..."} />
+            <CardItem text={"HIgh Blood Pressure"} />
+            <CardItem text={"HIV"} />
+            <CardItem text={"Diabetes"} />
+            <CardItem text={"Tubercolosis"} />
+            <CardItem text={"See All..."} />
 
         </Box>
 
- <Typography sx={{ fontSize:'42px' , margin:'8px 0' , fontWeight:'300' , textAlign:'left' }} > Schedule an appointment with <span style={{ color:'green' , fontWeight:'600' , TextDecoration:'uppercase' }} >A PSYCHOLOGIST</span>. </Typography>
- <Typography sx={{ fontSize:'24px' , width:'75%' , margin:'8px 0' , fontWeight:'100' , textAlign:'left' }} > INcludes Session Doctors and Primary Health Care by Professional nurses. </Typography>
+ <Typography sx={{ fontSize:'38px' , margin:'8px 0' , fontWeight:'300' , textAlign:'left' , display:'flex' , alignItems:'center'}} > <DoctorHeader />. </Typography>
+ <Typography sx={{ fontSize:'24px' , width:'75%' , margin:'8px 0' , fontWeight:'100' , textAlign:'left' }} > Includes Session Doctors and Primary Health Care by Professional nurses. </Typography>
 
           </Grid>
           <Grid
             item
             xs={3}
             sx={{
-              background: "green",
               alignItems: "center",
-              marginTop:'100px'
+              padding:'115px 0'
             }}
           >
-            <Box sx={{ margin:'32px 0' , width:'100%' , height:'150px' , borderLeft:'10px solid blue' }} >
+            <Paper elevation={3} sx={{ "&:hover":{ background:'rgba(1,1,1,.2)' } , margin:'32px 0' , width:'100%' , height:'100px' , borderLeft:'10px solid blue' , display:'flex' , alignItems:'center' , justifyContent:'space-between' , padding:'0 21px' }} >
 
+                <SearchIcon sx={{ fontSize:'35px' , color:'blue' }} />
+                <Typography sx={{  }} > Find a Nurse  </Typography>
+                <ArrowForwardIcon sx={{ color:'blue'}} />
 
-            </Box>
-             <Box sx={{ margin:'32px 0' , width:'100%' , height:'150px' , borderLeft:'10px solid blue' }} >
+            </Paper>
+             <Paper elevation={3} sx={{ "&:hover":{ background:'rgba(1,1,1,.2)' } , margin:'32px 0' , width:'100%' , height:'100px' , borderLeft:'10px solid blue' , display:'flex' , alignItems:'center' , justifyContent:'space-between' , padding:'0 21px' }} >
+                <TipsAndUpdatesIcon sx={{ fontSize:'35px' , color:'blue' }} />
+                <Typography sx={{  }} > Tips  </Typography>
+                <ArrowForwardIcon sx={{ color:'blue'}} />
 
+            </Paper>
+             <Paper elevation={3} sx={{ "&:hover":{ background:'rgba(1,1,1,.2)' } , margin:'32px 0' , width:'100%' , height:'100px' , borderLeft:'10px solid blue' , display:'flex' , alignItems:'center' , justifyContent:'space-between' , padding:'0 21px' }} >
+                <CallIcon sx={{ fontSize:'35px' , color:'blue' }} />
+                <Typography sx={{  }} > Contact Us   </Typography>
+                <ArrowForwardIcon sx={{ color:'blue'}} />
 
-            </Box>
-             <Box sx={{ margin:'32px 0' , width:'100%' , height:'150px' , borderLeft:'10px solid blue' }} >
+            </Paper>
+        </Grid>
 
-
-            </Box>
+        <Grid md={3.5} sx={{ margin:'32px auto 80px auto' , height:'350px' , background:'' }} >
+          <Box sx={{ height:'300px' , width:'100%' , backgroundImage: "url('/hero-8.png')" , backgroundSize:'cover' , backgroundPosition:'center' , backgroundRepeat:'no-repeat'  }} />
+          <Typography sx={{ textAlign:'center' }} > Access quickly to the availablility of all your practitioners </Typography>
+        </Grid>
+        <Grid md={3.5} sx={{ margin:'32px auto 80px auto' , height:'350px' , background:'' }} >
+          <Box sx={{ height:'300px' , width:'100%' , backgroundImage: "url('/hero-7.png')" , backgroundSize:'cover' , backgroundPosition:'center' , backgroundRepeat:'no-repeat'  }} />
+          <Typography sx={{ textAlign:'center' }} > A company of practitioners to accompany you. </Typography>
+        </Grid>
+        <Grid md={3.5} sx={{ margin:'32px auto 80px auto' , height:'350px' , background:'' }} >
+          <Box sx={{ height:'300px' , width:'100%' , backgroundImage: "url('/hero-8.png')" , backgroundSize:'cover' , backgroundPosition:'center' , backgroundRepeat:'no-repeat'  }} />
+          <Typography sx={{ textAlign:'center' }} > Manage your Appointments and get health tips as well. </Typography>
         </Grid>
         </Grid>
+
+
+        <Typography style={{ fontWeight:'600' ,color:GREEN , fontSize:'40px' }} >{"Campaigns"}</Typography>
+        <Box sx={{ margin:'50px 0' }} >
+        <Carousel />
+        </Box>
+
+        <Box sx={{ margin:'50px 0' }} >
+        <Carousel />
+        </Box>
 
       </Box>
     </Box>
@@ -116,3 +156,77 @@ const CardItem = ({text}) => {
 
     )
 }
+
+function NavItem() {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  return (
+    <div>
+      <Button
+        id="basic-button"
+        aria-controls={open ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+      >
+        Dashboard
+      </Button>
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <Box 
+        sx={{ width:'800px' , height:'50vh' , background:'' }}
+
+         >
+
+
+        </Box>
+      </Menu>
+    </div>
+  );
+}
+
+
+const DoctorHeader = () => {
+  const doctors = [  "General practitioner",
+  "Emergency physician",
+  "Obstetrician (OB)",
+  "gynecologist (GYN)",
+  "Dermatologist",
+  "Disease specialist",
+  "HIV/AIDS specialist",];
+  const [currentDoctorIndex, setCurrentDoctorIndex] = useState(0);
+
+  // Function to cycle through the doctors
+  const cycleDoctors = () => {
+    setCurrentDoctorIndex((prevIndex) => (prevIndex + 1) % doctors.length);
+  };
+
+  useEffect(() => {
+    // Set a timer to change the displayed doctor every 8 seconds
+    const timer = setTimeout(cycleDoctors, 3000);
+
+    return () => {
+      // Clear the timer when the component unmounts
+      clearTimeout(timer);
+    };
+  }, [currentDoctorIndex]);
+
+  return (
+    <Typography sx={{ fontSize:'38px', textDecoration:'uppercase'}} >{"Schedule an appointment with "} <span style={{ fontWeight:'600' ,color:GREEN , fontSize:'40px' }} >{doctors[currentDoctorIndex].toUpperCase()}</span></Typography>
+    
+  );
+};
