@@ -8,6 +8,9 @@ import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 import CallIcon from '@mui/icons-material/Call';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Carousel  from "./../carousel";
+import AboutUsSlider  from "./../about-us-slider";
+import WhatWeDo  from "./../services/what-we-do";
+
 
 const GREEN = "#449842"
 const BLUE = "#001842"
@@ -117,6 +120,57 @@ export const Main = () => {
         </Box>
 
       </Box>
+          <Box sx={{ height:'50vh', margin: "120px 0 0 0", backgroundImage: "url('/Health-Sciences-Banner.jpg')" , backgroundSize:'cover' , backgroundPosition:'left' }}/>
+      <Box sx={{ width: "90%", margin: "120px auto" }}>
+        
+        <TitleHeader text={"About Us "}/>
+
+        <Grid container>
+        <Grid item xs={4} sx={{ height:'70vh' , backgroundImage: `url('/about-us.jpg')` , backgroundSize:'cover' , backgroundPosition:'center' , backgroundRepeat:'no-repeat' }} />
+        <Grid item xs={8} sx={{ height:'500px' , background:'' , padding:'0 32px' }} >
+<Typography sx={{ textAlign:'justify', fontSize:'21px' , lineHeight:'42px' }} >
+{"The University of the Free State (UFS) School Clinic is a comprehensive medical facility that provides high-quality care to registered UFS staff and students. Our experienced team of healthcare professionals is dedicated to promoting well-being and providing innovative healthcare solutions. We emphasize compassionate care, advanced technology, and medical expertise."}
+</Typography>
+
+<br/>
+<Typography sx={{ textAlign:'justify', fontSize:'21px' , lineHeight:'42px' }} >
+
+{"We offer a wide range of services, including:"}
+</Typography>
+<br/>
+<Typography sx={{ textAlign:'justify', fontSize:'21px' , lineHeight:'42px' }} >
+
+<ul style={{padding:"0 32px"}} >
+<li>Medical examinations</li>
+<li>Treatment of minor illnesses and injuries</li>
+<li>Screening for sexually transmitted diseases (STDs)</li>
+<li>Pregnancy tests</li>
+<li>Psychosocial counseling</li>
+<li>Health education and promotion</li>
+</ul>
+<br/>
+</Typography>
+<Typography sx={{ textAlign:'justify', fontSize:'21px' , lineHeight:'42px' }} >
+{"We are committed to maintaining strict confidentiality, and our care is available to all registered UFS staff and students, regardless of their financial situation."}
+
+</Typography>
+<br/>
+        </Grid>
+        </Grid>
+        <Box sx={{ margin:'100px 0' }} >
+ <Typography sx={{ fontSize:'34px' , fontWeight:'600' , margin:'0' , }} > {"Exploring The Frontiers of Health: Articles and Blogs"} </Typography>
+ 
+<AboutUsSlider />
+        </Box>
+     
+      </Box>
+<Box sx={{ background:GREEN , padding:'50px' , margin:'50px 0 100px 0' }} >
+<Typography sx={{ fontSize:'50px' , fontWeight:'600' , color:'white' , textAlign:'center' }} >WHAT WE DO</Typography>
+     </Box>
+
+    
+<WhatWeDo />
+
     </Box>
   );
 };
