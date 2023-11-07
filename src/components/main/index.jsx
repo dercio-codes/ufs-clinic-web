@@ -53,10 +53,10 @@ export const Main = () => {
       </Box>
       <Box
         sx={{
-          height: "50vh",
+          height: {xs:'30vh',lg:"50vh"},
           padding: "30px",
           backgroundImage: "url('/qwaqwa-banner.jpg')",
-          backgroundSize: "cover",
+          backgroundSize: { xs:'contain' , lg: "cover"},
           backgroundPosition: "left",
         }}
       />
