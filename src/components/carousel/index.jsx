@@ -33,7 +33,7 @@ export default function Carousel() {
               backgroundPosition: "center",
               objectFit: "contain",
               width: "100%",
-              height: "100%",
+              height: "70vh",
             }}
           />
         </SwiperSlide>
@@ -46,7 +46,8 @@ export default function Carousel() {
               backgroundPosition: "center",
               objectFit: "contain",
               width: "100%",
-              height: "100%",
+              height: "70vh",
+
             }}
           />
         </SwiperSlide>
@@ -59,7 +60,8 @@ export default function Carousel() {
               backgroundPosition: "center",
               objectFit: "contain",
               width: "100%",
-              height: "100%",
+              height: "70vh",
+
             }}
           />
         </SwiperSlide>
