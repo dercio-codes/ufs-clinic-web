@@ -274,7 +274,8 @@ export const Main = () => {
         <Grid container>
           <Grid
             item
-            xs={4}
+            xs={12}
+            lg={4}
             sx={{
               height: "70vh",
               backgroundImage: `url('/about-us.jpg')`,
@@ -285,7 +286,8 @@ export const Main = () => {
           />
           <Grid
             item
-            xs={8}
+            xs={12}
+            lg={8}
             sx={{ height: "500px", background: "", padding: "0 32px" }}
           >
             <Typography
@@ -370,7 +372,7 @@ export const Main = () => {
 
       <Box
         sx={{
-          height: "50vh",
+          height: {xs:'30vh',lg:"50vh"},
           margin: "120px 0 0 0",
           backgroundImage: "url('/builing-banner.jpg')",
           backgroundSize: "cover",

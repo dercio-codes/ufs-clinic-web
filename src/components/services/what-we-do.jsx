@@ -181,7 +181,7 @@ export default function WhatWeDo() {
 					xs={12}
 					md={3}
 					sx={{
-						height: "100vh",
+						height: "fit-content",
 						background: GREEN,
 					}}
 				></Grid>

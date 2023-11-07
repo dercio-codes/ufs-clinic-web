@@ -44,7 +44,7 @@ export default function AboutUsSlider() {
 
 const Card = () => {
   return(
-    <Paper elevation={5}  sx={{ border:'1px solid rgba(1,1,1,.1)' , width:'400px' , height:'auto' ,  }} >
+    <Paper elevation={5}  sx={{ border:'1px solid rgba(1,1,1,.1)' , width:'400px' , height:'auto' , margin:{xs:'0 75px', lg:'0'} }} >
       <Box sx={{ height:'350px', padding: "0", backgroundImage: "url('/about-us.jpg')" , backgroundSize:'contain' , backgroundPosition:'center' , backgroundRepeat:'no-repeat' }}/>
 
       <Box sx={{ p:'0px 12px' }} >
