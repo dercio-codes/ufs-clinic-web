@@ -27,7 +27,7 @@ export default function Carousel() {
         <SwiperSlide>
           <Box
             sx={{
-              backgroundImage: '"/poster-1.png"',
+              backgroundImage: '/poster-1.png',
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
@@ -40,7 +40,7 @@ export default function Carousel() {
         <SwiperSlide>
           <Box
             sx={{
-              backgroundImage: '"/poster-2.png"',
+              backgroundImage: '/poster-2.png',
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
@@ -54,7 +54,7 @@ export default function Carousel() {
         <SwiperSlide>
           <Box
             sx={{
-              backgroundImage: '"/poster-3.png"',
+              backgroundImage: '/poster-3.png',
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
