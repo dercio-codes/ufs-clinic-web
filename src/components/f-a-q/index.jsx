@@ -42,7 +42,7 @@ export default function FrequentlyAsked() {
   return (
     <Box>
       {questions.map((item, index) => {
-        return <AccordionItem q={item.question} a={item.answer} />;
+        return <AccordionItem key={index} q={item.question} a={item.answer} />;
       })}
     </Box>
   );

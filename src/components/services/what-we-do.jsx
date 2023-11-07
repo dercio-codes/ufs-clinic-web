@@ -97,7 +97,7 @@ export default function WhatWeDo() {
 								onClick={() => {
 									setSelected(item);
 								}}
-								index={index}
+								key={index}
 								sx={{
 									fontSize: "21px",
 									textAlign: "center",
@@ -122,7 +122,7 @@ export default function WhatWeDo() {
 								onClick={() => {
 									setSelected(item);
 								}}
-								index={index}
+								key={index}
 								sx={{
 									fontSize: "21px",
 									textAlign: "center",
@@ -154,7 +154,7 @@ export default function WhatWeDo() {
 								item
 								xs={6}
 								md={3}
-								index={index}
+								key={index}
 								sx={{
 									fontSize: "21px",
 									textAlign: "left",

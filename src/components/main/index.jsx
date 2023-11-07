@@ -490,9 +490,16 @@ function NavItem({ text }) {
         <Box sx={{ width: "800px", minHeight: "50vh", background: "" }}>
           <Grid container>
             <Grid item xs={6}>
-              <img
-                src="/poster-1.png"
-                style={{ objectFit: "contain", width: "100%", height: "100%" }}
+              <Box
+                sx={{
+                  backgroundImage: '"/poster-1.png"',
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  objectFit: "contain",
+                  width: "100%",
+                  height: "100%",
+                }}
               />
             </Grid>
             <Grid item xs={6} sx={{ display: "flex", flexWrap: "wrap" }}>

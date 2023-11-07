@@ -1,18 +1,17 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/pagination";
 
 // import required modules
-import { Pagination } from 'swiper/modules';
-import { Scrollbar } from 'swiper/modules';
-
+import { Pagination } from "swiper/modules";
+import { Scrollbar } from "swiper/modules";
+import { Box, Typography, Grid, Menu, Tooltip, Paper } from "@mui/material";
 
 export default function Carousel() {
-
   return (
     <>
       <Swiper
@@ -25,9 +24,45 @@ export default function Carousel() {
         modules={[Scrollbar]}
         className="mySwiper"
       >
-        <SwiperSlide><img src="/poster-1.png" /></SwiperSlide>
-        <SwiperSlide><img src="/poster-2.png" /></SwiperSlide>
-        <SwiperSlide><img src="/poster-3.png" /></SwiperSlide>
+        <SwiperSlide>
+          <Box
+            sx={{
+              backgroundImage: '"/poster-1.png"',
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              objectFit: "contain",
+              width: "100%",
+              height: "100%",
+            }}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            sx={{
+              backgroundImage: '"/poster-2.png"',
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              objectFit: "contain",
+              width: "100%",
+              height: "100%",
+            }}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box
+            sx={{
+              backgroundImage: '"/poster-3.png"',
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              objectFit: "contain",
+              width: "100%",
+              height: "100%",
+            }}
+          />
+        </SwiperSlide>
       </Swiper>
     </>
   );
