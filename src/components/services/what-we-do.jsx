@@ -11,6 +11,7 @@ import {
 
 const GREEN = "#449842";
 const BLUE = "#001842";
+const RED = "#6A2F2F";
 const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
 export default function WhatWeDo() {
@@ -25,15 +26,41 @@ export default function WhatWeDo() {
 					sx={{
 						minHeight: "90vh",
 						margin: "0 0 100px 0",
-						border: "8px dashed red",
+						border: "8px dashed #6A2F2F",
 						borderRadius: "32px",
 						padding: "80px 32px",
 					}}
 				>
 					<Grid container>
-						<Item number={true} theme={GREEN} />
-						<Item number={false} theme={BLUE} />
-						<Item number={true} theme={"red"} />
+						<Item
+							image={"green-icon.png"}
+							number={true}
+							topic={"PREVENTATIVE CARE"}
+							theme={GREEN}
+							items={[
+								"Awareness Campaigns",
+								"Adult Vaccinations",
+								"Travel Medicines Clinic",
+							]}
+						/>
+						<Item
+							image={"health-status.png"}
+							number={false}
+							topic={"PRIMARY HEALTH CARE"}
+							theme={BLUE}
+							items={[
+								"Primary Health Care services are rendered  by Professional nurses for students without medical aid. Consultation is available on an appointment basis and an admin fee apply.",
+							]}
+						/>
+						<Item
+							image={"red-icon.png"}
+							number={true}
+							topic={"CONSULTATION"}
+							theme={"#6A2F2F"}
+							items={[
+								"Consultation is available on an appointment basis and medical aid tariffs apply. Book Now!",
+							]}
+						/>
 					</Grid>
 				</Grid>
 
@@ -50,8 +77,32 @@ export default function WhatWeDo() {
 					}}
 				>
 					<Grid container>
-						<ItemSmall theme={BLUE} number={true} />
-						<ItemSmall theme={BLUE} number={false} />
+						<ItemSmall
+							image={"Thermometer.png"}
+							topic={"MINOR ALIGNMENTS"}
+							theme={BLUE}
+							number={true}
+							items={[
+								"Respiratory Conditions. e.g FLU",
+								"Ear Nose and Throat Conditions",
+								"Eye Conditions",
+								"Skin Conditions",
+								"Sexually Transmitted Infections",
+							]}
+						/>
+						<ItemSmall
+							image={"medicines.png"}
+							topic={"CHRONIC MEDICATION"}
+							theme={BLUE}
+							number={false}
+							items={[
+								"Antiretroviral (ARV) Medication",
+								"Pre-xposure Prophylaxis",
+								" ",
+								" ",
+								" ",
+							]}
+						/>
 					</Grid>
 				</Grid>
 
@@ -62,14 +113,40 @@ export default function WhatWeDo() {
 					sx={{
 						minHeight: "90vh",
 						margin: "0 0 100px auto",
-						border: `8px dashed RED`,
+						border: `8px dashed #6A2F2F`,
 						borderRadius: "32px",
 						padding: "80px 32px",
 					}}
 				>
 					<Grid container>
-						<ItemSmall theme={"red"} number={true} />
-						<ItemSmall theme={"red"} number={false} />
+						<ItemSmall
+							image={"doctors-prescription.png"}
+							topic={"SCREENINGS"}
+							theme={"#6A2F2F"}
+							number={false}
+							items={[
+								"Blood Pressure",
+								"Weight",
+								"Body Mass Index",
+								"Blood Glucose",
+								"Blood Cholesterol",
+							]}
+						/>
+						<ItemSmall
+							image={
+								"young-woman-in-consultations.png"
+							}
+							topic={"WOMENS HEALTH"}
+							theme={"#6A2F2F"}
+							number={true}
+							items={[
+								"Contraceptives",
+								"Oral",
+								"Emergency Pill ( Morning After )",
+								"Infection",
+								"Female Condoms",
+							]}
+						/>
 					</Grid>
 				</Grid>
 			</Grid>
@@ -80,7 +157,7 @@ export default function WhatWeDo() {
 					textAlign: "left",
 				}}
 			>
-				Find a topic by its first letter :
+				Find a topic by its first letter :{" "}
 			</Typography>
 
 			<Box
@@ -179,17 +256,122 @@ export default function WhatWeDo() {
 				<Grid
 					item
 					xs={12}
-					md={3}
+					md={2.5}
 					sx={{
-						height: "fit-content",
-						background: GREEN,
+						height: "70vh",
 					}}
-				></Grid>
+				>
+					<Box
+						sx={{
+							height: "",
+							width: "100%",
+							margin: "0 auto",
+						}}
+					>
+						<Box
+							sx={{
+								height: "80px",
+								background: "",
+								margin: "32px 0",
+								backgroundImage:
+									"url('/plain.png')",
+								backgroundSize: "contain",
+								backgroundRepeat: "no-repeat",
+								backgroundPosition: "center",
+								scale: "0.7",
+							}}
+						></Box>
+						<Box
+							sx={{
+								height: "35vh",
+								backgroundImage:
+									'url("/sky.jpg")',
+								backgroundPosition: "right",
+								backgroundSize: "cover",
+								backgroundAttachment: "fixed",
+							}}
+						>
+							<Box
+								sx={{
+									background:
+										"rgba(1,1,1,.5)",
+									width: "100%",
+									height: "100%",
+									opacity: "0.5",
+								}}
+							/>
+						</Box>
+						<Box
+							sx={{
+								width: "100%",
+								margin: "0 auto",
+								background: RED,
+								padding: "32px 21px",
+								borderRadius: "0 0 21px 21px",
+							}}
+						>
+							{" "}
+							<Typography
+								sx={{
+									fontSize: "12px",
+									color: "white",
+									fontWeight: "600",
+								}}
+							>
+								{" "}
+								+27 51 401 9111 | info@ufs.ac.za
+								| www.ufs.ac.za
+							</Typography>
+						</Box>
+
+						<Grid container>
+							<Grid
+								item
+								xs={6}
+								sx={{
+									display: "flex",
+									justifyContent: "center",
+									alignItems: "center",
+								}}
+							>
+								<Typography
+									sx={{
+										fontStyle: "italic",
+										fontSize: "10px",
+									}}
+								>
+									{" "}
+									Inspiring
+									excellence,transforming
+									lives through quality
+									impact and care.{" "}
+								</Typography>
+							</Grid>
+							<Grid
+								item
+								xs={6}
+								sx={{
+									height: "50px",
+									background: "",
+									margin: "32px 0",
+									backgroundImage:
+										"url('/qwaqwa-logo.jpg')",
+									backgroundSize: "contain",
+									backgroundRepeat:
+										"no-repeat",
+									backgroundPosition:
+										"center",
+									scale: "0.7",
+								}}
+							></Grid>
+						</Grid>
+					</Box>
+				</Grid>
 
 				<Grid
 					item
 					xs={12}
-					md={9}
+					md={4}
 					sx={{
 						padding: "0 32px",
 					}}
@@ -259,12 +441,33 @@ export default function WhatWeDo() {
 						DR Mohlala (Assisstant Offer){" "}
 					</Typography>
 				</Grid>
+				<Grid
+					item
+					xs={4}
+					sx={{
+						display: "flex",
+						minHeight: { lg: "70vh" },
+						justifyContent: "flex-end",
+						alignItems: "flex-end",
+					}}
+				>
+					<Box
+						sx={{
+							height: "250px",
+							width: "100%",
+							backgroundImage: `url("/contact-image.png")`,
+							backgroundSize: "contain",
+							backgroundPosition: "center",
+							backgroundRepeat: "no-repeat",
+						}}
+					/>
+				</Grid>
 			</Grid>
 		</Box>
 	);
 }
 
-const Item = ({ number, theme }) => {
+const Item = ({ number, theme, image, topic, items }) => {
 	return (
 		<Grid
 			item
@@ -286,11 +489,26 @@ const Item = ({ number, theme }) => {
 			>
 				<Box
 					sx={{
-						height: "200px",
-						width: "200px",
-						border: "1px solid black",
+						height: "180px",
+						width: "180px",
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "center",
+						border: "1px solid rgba(2,2,2,.5)",
 					}}
-				></Box>
+				>
+					<Box
+						sx={{
+							height: "120px",
+							width: "120px",
+							backgroundImage: `url("/${image}")`,
+							margin: "auto auto",
+							backgroundSize: "contain",
+							backgroundPosition: "center",
+							backgroundRepeat: "no-repeat()",
+						}}
+					/>
+				</Box>
 				<Box
 					sx={{
 						display: "flex",
@@ -304,13 +522,13 @@ const Item = ({ number, theme }) => {
 				>
 					<Typography
 						sx={{
-							fontSize: "34px",
+							fontSize: "28px",
 							fontWeight: "600",
 							color: "white",
 							textAlign: "center",
 						}}
 					>
-						WHAT WE DO
+						{topic}
 					</Typography>
 				</Box>
 			</Box>
@@ -323,14 +541,9 @@ const Item = ({ number, theme }) => {
 					textAlign: "center",
 				}}
 			>
-				<li>Medical examinations</li>
-				<li>Treatment of minor illnesses and injuries</li>
-				<li>
-					Screening for sexually transmitted diseases (STDs)
-				</li>
-				<li>Pregnancy tests</li>
-				<li>Psychosocial counseling</li>
-				<li>Health education and promotion</li>
+				{items.map((item, index) => {
+					return <li key={index}> {item} </li>;
+				})}
 			</ul>
 			<Box sx={{ display: "flex", justifyContent: "center" }}>
 				<Button
@@ -350,7 +563,7 @@ const Item = ({ number, theme }) => {
 	);
 };
 
-const ItemSmall = ({ number, theme }) => {
+const ItemSmall = ({ number, theme, image, topic, items }) => {
 	return (
 		<Grid
 			item
@@ -371,11 +584,26 @@ const ItemSmall = ({ number, theme }) => {
 			>
 				<Box
 					sx={{
-						height: "200px",
-						width: "200px",
-						border: "1px solid black",
+						height: "180px",
+						width: "180px",
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "center",
+						border: "1px solid rgba(2,2,2,.5)",
 					}}
-				></Box>
+				>
+					<Box
+						sx={{
+							height: "120px",
+							width: "120px",
+							backgroundImage: `url("/${image}")`,
+							margin: "auto auto",
+							backgroundSize: "contain",
+							backgroundPosition: "center",
+							backgroundRepeat: "no-repeat()",
+						}}
+					/>
+				</Box>
 				<Box
 					sx={{
 						display: "flex",
@@ -395,7 +623,7 @@ const ItemSmall = ({ number, theme }) => {
 							textAlign: "center",
 						}}
 					>
-						WHAT WE DO
+						{topic}
 					</Typography>
 				</Box>
 			</Box>
@@ -408,14 +636,9 @@ const ItemSmall = ({ number, theme }) => {
 					textAlign: "center",
 				}}
 			>
-				<li>Medical examinations</li>
-				<li>Treatment of minor illnesses and injuries</li>
-				<li>
-					Screening for sexually transmitted diseases (STDs)
-				</li>
-				<li>Pregnancy tests</li>
-				<li>Psychosocial counseling</li>
-				<li>Health education and promotion</li>
+				{items.map((item, index) => {
+					return <li key={index}> {item} </li>;
+				})}
 			</ul>
 			<Box sx={{ display: "flex", justifyContent: "center" }}>
 				<Button

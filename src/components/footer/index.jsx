@@ -11,6 +11,8 @@ import {
 
 const GREEN = "#449842";
 const BLUE = "#001842";
+const RED = "#6A2F2F";
+
 const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
 export default function Footer() {
@@ -20,7 +22,7 @@ export default function Footer() {
 				sx={{
 					width: "90%",
 					margin: "0 auto",
-					background: "red",
+					background: RED,
 					padding: "32px 21px",
 					borderRadius: "0 0 21px 21px",
 				}}

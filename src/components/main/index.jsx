@@ -15,11 +15,12 @@ import Footer from "./../footer";
 
 const GREEN = "#449842";
 const BLUE = "#001842";
+const RED = "#6A2F2F";
 
 export const Main = () => {
   return (
     <Box>
-      <Box sx={{ height: "5vh", background: "blue" }} />
+      <Box sx={{ height: "5vh", background: BLUE }} />
       <Box sx={{ width: "90%", margin: "0 auto" }}>
         <Grid container>
           <Grid
@@ -53,10 +54,10 @@ export const Main = () => {
       </Box>
       <Box
         sx={{
-          height: {xs:'30vh',lg:"50vh"},
+          height: { xs: "30vh", lg: "50vh" },
           padding: "30px",
           backgroundImage: "url('/qwaqwa-banner.jpg')",
-          backgroundSize: { xs:'contain' , lg: "cover"},
+          backgroundSize: { xs: "contain", lg: "cover" },
           backgroundPosition: "left",
         }}
       />
@@ -64,7 +65,7 @@ export const Main = () => {
       <Box sx={{ width: "90%", margin: "0 auto" }}>
         <Grid container columnSpacing={6}>
           <Grid item xs={12} lg={9} sx={{ padding: "30px", background: "" }}>
-            <TitleHeader text={"Qwa Qwa Clinic Wellness "} />
+            <TitleHeader text={"Health & Wellness Centre Qwa Qwa Campus "} />
 
             <Box sx={{ display: "flex", justifyContent: "space-between" }}>
               <CardItem
@@ -120,16 +121,16 @@ export const Main = () => {
                 margin: "32px 0",
                 width: "100%",
                 height: "100px",
-                borderLeft: "10px solid blue",
+                borderLeft: "10px solid #001842",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
                 padding: "0 21px",
               }}
             >
-              <SearchIcon sx={{ fontSize: "35px", color: "blue" }} />
+              <SearchIcon sx={{ fontSize: "35px", color: "#001842" }} />
               <Typography sx={{}}> Find a Nurse </Typography>
-              <ArrowForwardIcon sx={{ color: "blue" }} />
+              <ArrowForwardIcon sx={{ color: "#001842" }} />
             </Paper>
             <Paper
               elevation={3}
@@ -138,16 +139,16 @@ export const Main = () => {
                 margin: "32px 0",
                 width: "100%",
                 height: "100px",
-                borderLeft: "10px solid blue",
+                borderLeft: "10px solid #001842",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
                 padding: "0 21px",
               }}
             >
-              <TipsAndUpdatesIcon sx={{ fontSize: "35px", color: "blue" }} />
+              <TipsAndUpdatesIcon sx={{ fontSize: "35px", color: "#001842" }} />
               <Typography sx={{}}> Tips </Typography>
-              <ArrowForwardIcon sx={{ color: "blue" }} />
+              <ArrowForwardIcon sx={{ color: "#001842" }} />
             </Paper>
             <Paper
               elevation={3}
@@ -156,20 +157,21 @@ export const Main = () => {
                 margin: "32px 0",
                 width: "100%",
                 height: "100px",
-                borderLeft: "10px solid blue",
+                borderLeft: "10px solid #001842",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
                 padding: "0 21px",
               }}
             >
-              <CallIcon sx={{ fontSize: "35px", color: "blue" }} />
+              <CallIcon sx={{ fontSize: "35px", color: "#001842" }} />
               <Typography sx={{}}> Contact Us </Typography>
-              <ArrowForwardIcon sx={{ color: "blue" }} />
+              <ArrowForwardIcon sx={{ color: "#001842" }} />
             </Paper>
           </Grid>
 
           <Grid
+            xs={12}
             md={3.5}
             sx={{
               margin: "32px auto 80px auto",
@@ -195,6 +197,7 @@ export const Main = () => {
             </Typography>
           </Grid>
           <Grid
+            xs={12}
             md={3.5}
             sx={{
               margin: "32px auto 80px auto",
@@ -220,6 +223,7 @@ export const Main = () => {
             </Typography>
           </Grid>
           <Grid
+            xs={12}
             md={3.5}
             sx={{
               margin: "32px auto 80px auto",
@@ -250,10 +254,47 @@ export const Main = () => {
           {"Campaigns"}
         </Typography>
         <Box sx={{ margin: "50px 0" }}>
+          <Typography
+            sx={{
+              fontWeight: "600",
+              color: "rgba(1, 1, 1, 0.5)",
+              fontSize: "32px",
+              textAlign: "center",
+              margin: "40px 0",
+            }}
+          >
+            {"Womens Health"}
+          </Typography>
           <Carousel />
         </Box>
 
         <Box sx={{ margin: "50px 0" }}>
+          <Typography
+            sx={{
+              fontWeight: "600",
+              color: "rgba(1, 1, 1, 0.5)",
+              fontSize: "32px",
+              textAlign: "center",
+              margin: "40px 0",
+            }}
+          >
+            {"Mens Health"}
+          </Typography>
+          <Carousel />
+        </Box>
+
+        <Box sx={{ margin: "50px 0" }}>
+          <Typography
+            sx={{
+              fontWeight: "600",
+              color: "rgba(1, 1, 1, 0.5)",
+              fontSize: "32px",
+              textAlign: "center",
+              margin: "40px 0",
+            }}
+          >
+            {"Protective Sex Health"}
+          </Typography>
           <Carousel />
         </Box>
       </Box>
@@ -277,9 +318,10 @@ export const Main = () => {
             xs={12}
             lg={4}
             sx={{
-              height: "70vh",
+              height: "85vh",
               backgroundImage: `url('/about-us.jpg')`,
               backgroundSize: "cover",
+              margin: "0 0 0 0",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
@@ -288,7 +330,11 @@ export const Main = () => {
             item
             xs={12}
             lg={8}
-            sx={{ height: "500px", background: "", padding: "0 32px" }}
+            sx={{
+              minHeight: "500px",
+              background: "",
+              padding: { xs: "50px 0", lg: "0 32px" },
+            }}
           >
             <Typography
               sx={{
@@ -345,7 +391,9 @@ export const Main = () => {
           </Grid>
         </Grid>
         <Box sx={{ margin: "100px 0" }}>
-          <Typography sx={{ fontSize: "34px", fontWeight: "600", margin: "0" }}>
+          <Typography
+            sx={{ fontSize: "34px", fontWeight: "600", margin: "100px 0" }}
+          >
             {" "}
             {"Exploring The Frontiers of Health: Articles and Blogs"}{" "}
           </Typography>
@@ -372,7 +420,7 @@ export const Main = () => {
 
       <Box
         sx={{
-          height: {xs:'30vh',lg:"50vh"},
+          height: { xs: "30vh", lg: "50vh" },
           margin: "120px 0 0 0",
           backgroundImage: "url('/builing-banner.jpg')",
           backgroundSize: "cover",
@@ -612,7 +660,7 @@ const DoctorHeader = () => {
 
   return (
     <Typography sx={{ fontSize: "38px", textDecoration: "uppercase" }}>
-      {"Schedule an appointment with "}{" "}
+      {"Schedule an appointment with a "}{" "}
       <span style={{ fontWeight: "600", color: GREEN, fontSize: "40px" }}>
         {doctors[currentDoctorIndex].toUpperCase()}
       </span>
