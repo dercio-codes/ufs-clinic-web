@@ -20,38 +20,50 @@ const RED = "#6A2F2F";
 export const Main = () => {
   return (
     <Box>
+                   <Box
+        sx={{
+          height: "120px",
+          width: "65px",
+          backgroundImage: `url('dots.png')`,
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          position:'absolute',
+          right:'0',
+          top:'calc(20%)',
+        }}
+      />
+                     <Box
+        sx={{
+          height: "120px",
+          width: "65px",
+          backgroundImage: `url('dots.png')`,
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          position:'absolute',
+          left:'0',
+          rotate:'180deg',
+          top:'calc(120%)',
+        }}
+      />
+
+                           <Box
+        sx={{
+          height: "120px",
+          width: "65px",
+          backgroundImage: `url('dots.png')`,
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          position:'absolute',
+          left:'0',
+          rotate:'180deg',
+          top:'calc(320%)',
+        }}
+      />
       <Box sx={{ height: "5vh", background: BLUE }} />
-      <Box sx={{ width: "90%", margin: "0 auto" }}>
-        <Grid container>
-          <Grid
-            item
-            xs={2}
-            sx={{
-              padding: "30px",
-              backgroundImage: "url('/qwaqwa-logo.jpg')",
-              backgroundSize: "contain",
-              backgroundPosition: "left",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></Grid>
-          <Grid
-            item
-            xs={10}
-            sx={{
-              padding: "30px",
-              background: "",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-evenly",
-            }}
-          >
-            <NavItem text={"Health Tips "} />
-            <NavItem text={"Campaigns"} />
-            <NavItem text={"About"} />
-            <NavItem text={"Login "} />
-          </Grid>
-        </Grid>
-      </Box>
+      <Navbar />
       <Box
         sx={{
           height: { xs: "30vh", lg: "50vh" },
@@ -462,6 +474,42 @@ const MenuDrop = () => {
   );
 };
 
+export const Navbar = () => {
+  return (
+    <Box sx={{ width: "90%", margin: "0 auto" }}>
+      <Grid container>
+        <Grid
+          item
+          xs={2}
+          sx={{
+            padding: "30px",
+            backgroundImage: "url('/qwaqwa-logo.jpg')",
+            backgroundSize: "contain",
+            backgroundPosition: "left",
+            backgroundRepeat: "no-repeat",
+          }}
+        ></Grid>
+        <Grid
+          item
+          xs={10}
+          sx={{
+            padding: "30px",
+            background: "",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+          }}
+        >
+          <NavItem doctors={doctors} text={"Health Tips "} />
+          <NavItem doctors={sicknesses} text={"Campaigns"} />
+          <NavItem doctors={about} text={"About"} />
+          <NavItem doctors={false} text={"Login "} />
+        </Grid>
+      </Grid>
+    </Box>
+  );
+};
+
 const TitleHeader = ({ text }) => {
   return (
     <Typography
@@ -506,11 +554,125 @@ const CardItem = ({ text, image }) => {
   );
 };
 
-function NavItem({ text }) {
+const sicknesses = [
+  "Acanthosis nigricans",
+  "Acne",
+  "Acute coronary syndrome",
+  "Acute lymphocytic leukemia",
+  "Acute myeloid leukemia",
+  "AIDS",
+  "Alcohol dependence",
+  "Alzheimer's disease",
+  "Amyotrophic lateral sclerosis",
+  "Anorexia nervosa",
+  "Anxiety disorders",
+  "Aortic aneurysm",
+  "Appendicitis",
+  "Arthritis",
+  "Asthma",
+  "Autism spectrum disorder",
+  "Bacterial meningitis",
+  "Bipolar disorder",
+  "Bronchitis",
+  "Bulimia nervosa",
+  "Cancer",
+  "Cardiomyopathy",
+  "Cerebral palsy",
+  "Chronic obstructive pulmonary disease",
+  "Cirrhosis",
+  "Colitis",
+  "Congenital heart defects",
+  "Crohn's disease",
+  "Cystic fibrosis",
+  "Dengue fever",
+  "Depression",
+  "Diabetes",
+  "Down syndrome",
+  "Ebola virus disease",
+  "Eczema",
+  "Epilepsy",
+  "Esophageal cancer",
+  "Fibromyalgia",
+  "Flu",
+  "Food poisoning",
+  "Fractures",
+  "Gastritis",
+  "Glaucoma",
+  "Gonorrhea",
+  "Heart attack",
+  "Hepatitis",
+  "Herpes",
+  "HIV infection",
+  "Huntington's disease",
+  "Inflammatory bowel disease",
+  "Influenza",
+  "Kidney disease",
+  "Leukemia",
+  "Lupus",
+  "Lyme disease",
+  "Malaria",
+  "Multiple sclerosis",
+  "Muscular dystrophy",
+  "Myocardial infarction",
+  "Obesity",
+  "Obsessive-compulsive disorder",
+  "Osteoporosis",
+  "Pancreatitis",
+  "Parkinson's disease",
+  "Pelvic inflammatory disease",
+  "Pneumonia",
+  "Post-traumatic stress disorder",
+  "Prostate cancer",
+  "Psoriasis",
+  "Psychosis",
+  "Pulmonary embolism",
+  "Rabies",
+  "Rheumatoid arthritis",
+  "Schizophrenia",
+  "Seizures",
+  "Sepsis",
+  "Sickle cell anemia",
+  "Skin cancer",
+  "Spinal cord injury",
+  "Stroke",
+  "Syphilis",
+  "Tetanus",
+  "Thalassemia",
+  "Tuberculosis",
+  "Ulcerative colitis",
+  "Urinary tract infections",
+  "Viral meningitis",
+  "West Nile virus",
+  "Zika virus disease",
+];
+
+const doctors = [
+  "Nurse.",
+  "Psychology.",
+  "Therapist.",
+  "Psychiatrist.",
+  "Academic Advisor.",
+  "Nurse.",
+  "Psychology.",
+  "Therapist.",
+  "Psychiatrist.",
+  "Academic Advisor.",
+  "Nurse.",
+  "Psychology.",
+  "Therapist.",
+  "Psychiatrist.",
+  "Academic Advisor.",
+  "Therapist.",
+];
+
+const about = ["Our Story", "Our Vision", "Our Values", "Our Partners"];
+function NavItem({ text, doctors }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+    if (doctors !== false) {
+      setAnchorEl(event.currentTarget);
+    }
   };
   const handleClose = () => {
     setAnchorEl(null);
@@ -523,7 +685,7 @@ function NavItem({ text }) {
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
-        onClick={handleClick}
+        onMouseEnter={handleClick}
         sx={{ fontSize: "12px", color: BLUE }}
       >
         {text}
@@ -533,98 +695,32 @@ function NavItem({ text }) {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
+        onMouseLeave={handleClose}
         MenuListProps={{
           "aria-labelledby": "basic-button",
         }}
       >
         <Box sx={{ width: "800px", minHeight: "50vh", background: "" }}>
           <Grid container>
-            <Grid item xs={6}>
-              <Box
-                sx={{
-                  backgroundImage: '"/poster-1.png"',
-                  backgroundSize: "contain",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                  objectFit: "contain",
-                  width: "100%",
-                  height: "100%",
-                }}
-              />
-            </Grid>
-            <Grid item xs={6} sx={{ display: "flex", flexWrap: "wrap" }}>
-              <Typography
-                sx={{
-                  minHeight: "100px",
-                  background: GREEN,
-                  width: "50%",
-                  textAlign: "center",
-                  margin: "0 auto",
-                }}
-              >
-                {" "}
-                HIV{" "}
-              </Typography>
-              <Typography
-                sx={{
-                  minHeight: "100px",
-                  background: BLUE,
-                  width: "50%",
-                  textAlign: "center",
-                  margin: "0 auto",
-                }}
-              >
-                {" "}
-                TB{" "}
-              </Typography>
-              <Typography
-                sx={{
-                  minHeight: "100px",
-                  background: GREEN,
-                  width: "50%",
-                  textAlign: "center",
-                  margin: "0 auto",
-                }}
-              >
-                {" "}
-                Gynercologist{" "}
-              </Typography>
-              <Typography
-                sx={{
-                  minHeight: "100px",
-                  background: BLUE,
-                  width: "50%",
-                  textAlign: "center",
-                  margin: "0 auto",
-                }}
-              >
-                {" "}
-                High Blood Pressure{" "}
-              </Typography>
-              <Typography
-                sx={{
-                  minHeight: "100px",
-                  background: GREEN,
-                  width: "50%",
-                  textAlign: "center",
-                  margin: "0 auto",
-                }}
-              >
-                {" "}
-                Flu{" "}
-              </Typography>
-              <Typography
-                sx={{
-                  minHeight: "100px",
-                  background: BLUE,
-                  width: "50%",
-                  textAlign: "center",
-                  margin: "0 auto",
-                }}
-              >
-                {" "}
-                Covid{" "}
-              </Typography>
+            <Grid item xs={12} sx={{ display: "flex", flexWrap: "wrap" }}>
+              {doctors &&
+                doctors.map((item, index) => {
+                  return (
+                    <Typography
+                      key={index}
+                      sx={{
+                        padding: "12px 0",
+                        cursor: "pointer",
+                        width: "50%",
+                        textAlign: "center",
+                        border: "1px solid black",
+                        margin: "auto auto",
+                      }}
+                    >
+                      {item}
+                    </Typography>
+                  );
+                })}
             </Grid>
           </Grid>
         </Box>
