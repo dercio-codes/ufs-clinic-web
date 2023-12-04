@@ -285,7 +285,7 @@ background:'rgba(0,24,66,0.3)',
 					>
 						<Box
 							sx={{
-								height: { xs:"65px" , lg:"120px"},
+								height: { xs:"45px" , lg:"120px"},
 								background: "",
 								margin: "32px 0",
 								backgroundImage:
@@ -516,8 +516,8 @@ const Item = ({ number, theme, image, topic, items }) => {
 
 					<Box
 						sx={{
-							height: { xs:"65px" , lg:"120px"},
-							width: { xs:"65px" , lg:"120px"},
+							height: { xs:"45px" , lg:"120px"},
+							width: { xs:"45px" , lg:"120px"},
 							backgroundImage: `url("/${image}")`,
 							margin: "auto auto",
 							backgroundSize: "contain",
@@ -611,8 +611,8 @@ const ItemSmall = ({ number, theme, image, topic, items }) => {
 				>
 					<Box
 						sx={{
-							height: { xs:"65px" , lg:"120px"},
-							width: { xs:"65px" , lg:"120px"},
+							height: { xs:"45px" , lg:"120px"},
+							width: { xs:"45px" , lg:"120px"},
 							backgroundImage: `url("/${image}")`,
 							margin: "auto auto",
 							backgroundSize: "contain",

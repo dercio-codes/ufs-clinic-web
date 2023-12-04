@@ -39,7 +39,7 @@ export default function Footer() {
 			<Grid container columnSpacing={12}>
 				<Grid
 					item
-					xs={6}
+					xs={12}
 					md={3.5}
 					sx={{
 						display: "flex",
@@ -61,7 +61,7 @@ export default function Footer() {
 				</Grid>
 				<Grid
 					item
-					xs={6}
+					xs={12}
 					md={3}
 					sx={{
 						height: "180px",
