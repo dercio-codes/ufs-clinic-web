@@ -70,8 +70,8 @@ export const Main = () => {
           height: { xs: "30vh", lg: "50vh" },
           padding: "30px",
           backgroundImage: "url('/qwaqwa-banner.jpg')",
-          backgroundSize: { xs: "contain", lg: "cover" },
-          backgroundPosition: "left",
+          backgroundSize: { xs: "cover", lg: "cover" },
+          backgroundPosition: "left center",
         }}
       />
 
@@ -123,7 +123,7 @@ export const Main = () => {
               <Typography
                 sx={{
                   fontSize: "24px",
-                  width: "75%",
+                  width: { xs:'100%' , lg: "75%"},
                   margin: "8px 0",
                   fontWeight: "100",
                   textAlign: "left",
@@ -239,7 +239,7 @@ export const Main = () => {
             xs={12}
             md={3.5}
             sx={{
-              margin: "32px auto 80px auto",
+              margin: "32px auto",
               height: "350px",
               background: "",
             }}
@@ -269,7 +269,7 @@ export const Main = () => {
             xs={12}
             md={3.5}
             sx={{
-              margin: "32px auto 80px auto",
+              margin: "32px auto",
               height: "350px",
               background: "",
             }}
@@ -299,7 +299,7 @@ export const Main = () => {
             xs={12}
             md={3.5}
             sx={{
-              margin: "32px auto 80px auto",
+              margin: "32px auto",
               height: "350px",
               background: "",
             }}
