@@ -242,6 +242,10 @@ export const Main = () => {
               margin: "32px auto",
               height: "350px",
               background: "",
+              display:'flex',
+              flexDirection:'column',
+              alignItems:'center',
+              justifyContent:'center'
             }}
           >
             <Box data-aos="fade-left" data-aos-duration="2000">
@@ -272,6 +276,10 @@ export const Main = () => {
               margin: "32px auto",
               height: "350px",
               background: "",
+              display:'flex',
+              flexDirection:'column',
+              alignItems:'center',
+              justifyContent:'center'
             }}
           >
             <Box data-aos="fade-bottom" data-aos-duration="2000">
@@ -302,6 +310,10 @@ export const Main = () => {
               margin: "32px auto",
               height: "350px",
               background: "",
+              display:'flex',
+              flexDirection:'column',
+              alignItems:'center',
+              justifyContent:'center'
             }}
           >
             <Box data-aos="fade-right" data-aos-duration="2000">
