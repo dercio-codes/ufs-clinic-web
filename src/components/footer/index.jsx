@@ -71,7 +71,7 @@ export default function Footer() {
 						backgroundSize: "contain",
 						backgroundRepeat: "no-repeat",
 						backgroundPosition: "right",
-						scale: "0.7",
+						scale: "0.85",
 					}}
 				></Grid>
 				<Grid
@@ -79,7 +79,7 @@ export default function Footer() {
 					xs={12}
 					md={5}
 					sx={{
-						height: "180px",
+						height: {xs:'120px' , lg:"180px"},
 						background: "",
 						margin: "32px 0",
 						backgroundImage: "url('/qwaqwa-logo.jpg')",
