@@ -141,7 +141,7 @@ export default function Carousel() {
             >
               {Helplines.map((item, index) => {
                 return (
-                  <Box>
+                  <Box key={index}>
                   <Typography
                     key={index}
                     sx={{
@@ -158,7 +158,9 @@ export default function Carousel() {
                   </Typography>
                    {item.helplines && item.helplines.map((line,indexIndex)=>{
                     return(
-                      <Box>
+                      <Box
+                    key={indexIndex}
+                    >
                         <Typography
                     key={indexIndex}
                     sx={{
