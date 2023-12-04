@@ -490,7 +490,7 @@ const Item = ({ number, theme, image, topic, items }) => {
 			xs={12}
 			lg={5.5}
 			sx={{
-				minHeight: "50vh",
+				minHeight: { xs:'35vh', lg:"50vh"},
 				margin: "50px auto",
 				borderRadius: "32px",
 			}}
@@ -586,7 +586,7 @@ const ItemSmall = ({ number, theme, image, topic, items }) => {
 			item
 			xs={12}
 			sx={{
-				minHeight: "50vh",
+				minHeight: { xs:'35vh', lg:"50vh"},
 				margin: "50px auto",
 				borderRadius: "32px",
 			}}
