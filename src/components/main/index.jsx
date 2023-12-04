@@ -78,7 +78,7 @@ export const Main = () => {
       <div id="" />
 
       <Box sx={{ width: "90%", margin: "0 auto" }}>
-        <Grid container columnSpacing={6}>
+        <Grid container>
           <Grid item xs={12} lg={9} sx={{ padding: "30px", background: "" }}>
             <TitleHeader text={"Health & Wellness Centre Qwa Qwa Campus "} />
 
