@@ -36,7 +36,7 @@ export default function Footer() {
 				</Typography>
 			</Box>
 
-			<Grid container columnSpacing={12}>
+			<Grid container>
 				<Grid
 					item
 					xs={12}
@@ -50,7 +50,7 @@ export default function Footer() {
 					<Typography
 						sx={{
 							fontStyle: "italic",
-							width: "50%",
+							width: "60%",
 							fontSize: "21px",
 						}}
 					>
