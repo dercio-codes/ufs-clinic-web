@@ -26,7 +26,7 @@ export default function AboutUsSlider() {
     <Box sx={{ margin: "0 auto" }}>
       <Swiper
         slidesPerView={3}
-        spaceBetween={50}
+        spaceBetween={500}
         pagination={{
           clickable: true,
         }}
@@ -40,31 +40,58 @@ export default function AboutUsSlider() {
         }}
       >
         <SwiperSlide>
+            <Box data-aos="flip-right" data-aos-duration="2000" >
+         
           <Card image={"/flu.jpg"} />
+        </Box>
         </SwiperSlide>
         <SwiperSlide>
+            <Box data-aos="flip-right" data-aos-duration="2000" data-aos-delay="250" >
+         
           <Card image={"/students-sitting.jpg"} />
+        </Box>
         </SwiperSlide>
         <SwiperSlide>
+            <Box data-aos="flip-right" data-aos-duration="2000" data-aos-delay="600" >
+         
           <Card image={"/about-us.jpg"} />
+        </Box>
         </SwiperSlide>
         <SwiperSlide>
+            <Box data-aos="flip-right" data-aos-duration="2000" >
+         
           <Card image={"/flu.jpg"} />
+        </Box>
         </SwiperSlide>
         <SwiperSlide>
+            <Box data-aos="flip-right" data-aos-duration="2000" >
+         
           <Card image={"/students-sitting.jpg"} />
+        </Box>
         </SwiperSlide>
         <SwiperSlide>
+            <Box data-aos="flip-right" data-aos-duration="2000" >
+         
           <Card image={"/about-us.jpg"} />
+        </Box>
         </SwiperSlide>
         <SwiperSlide>
+            <Box data-aos="flip-right" data-aos-duration="2000" >
+         
           <Card image={"/flu.jpg"} />
+        </Box>
         </SwiperSlide>
         <SwiperSlide>
+            <Box data-aos="flip-right" data-aos-duration="2000" >
+         
           <Card image={"/students-sitting.jpg"} />
+        </Box>
         </SwiperSlide>
         <SwiperSlide>
+            <Box data-aos="flip-right" data-aos-duration="2000" >
+         
           <Card image={"/about-us.jpg"} />
+        </Box>
         </SwiperSlide>
       </Swiper>
     </Box>
@@ -77,14 +104,14 @@ const Card = ({ image }) => {
       elevation={5}
       sx={{
         border: "1px solid rgba(1,1,1,.1)",
-        width: "400px",
+        width: "350px",
         height: "auto",
         margin: { xs: "0", lg: "0" },
       }}
     >
       <Box
         sx={{
-          height: "350px",
+          height: "250px",
           padding: "0",
           backgroundImage: `url('${image}')`,
           backgroundSize: "cover",
@@ -113,11 +140,14 @@ const Card = ({ image }) => {
           <Button
             sx={{
               scale: "0.9",
-              background: "#001842",
               color: "white",
-              padding: "16px",
-              margin: "21px",
+              padding: "16px 32px",
+              margin: "21px 0",
               borderRadius: "32px",
+              background: "#001842",
+              "&:hover":{
+                color: "#001842",
+              }
             }}
           >
             {" "}

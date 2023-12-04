@@ -18,6 +18,8 @@ export default function WhatWeDo() {
 	const [selected, setSelected] = useState("");
 
 	return (
+            <Box data-aos="fade-down" data-aos-duration="1000" >
+
 		<Box sx={{ width: "90%", margin: "0 auto" }}>
 			<Grid container>
 				<Grid
@@ -74,8 +76,13 @@ export default function WhatWeDo() {
 						border: `8px dashed ${BLUE}`,
 						borderRadius: "32px",
 						padding: "80px 32px",
+						"&:hover":{
+background:'rgba(0,24,66,0.3)',
+						}
 					}}
 				>
+            <Box data-aos="fade-right" data-aos-duration="1000" >
+
 					<Grid container>
 						<ItemSmall
 							image={"Thermometer.png"}
@@ -104,6 +111,7 @@ export default function WhatWeDo() {
 							]}
 						/>
 					</Grid>
+					</Box>
 				</Grid>
 
 				<Grid
@@ -116,8 +124,13 @@ export default function WhatWeDo() {
 						border: `8px dashed #6A2F2F`,
 						borderRadius: "32px",
 						padding: "80px 32px",
+						"&:hover":{
+							background:"rgb(106,47,47,0.1)"
+						}
 					}}
 				>
+            <Box data-aos="fade-left" data-aos-duration="1000" >
+
 					<Grid container>
 						<ItemSmall
 							image={"doctors-prescription.png"}
@@ -148,9 +161,10 @@ export default function WhatWeDo() {
 							]}
 						/>
 					</Grid>
+					</Box>
 				</Grid>
 			</Grid>
-			<Typography
+			<Typography className={"hover-me"}
 				sx={{
 					fontSize: "24px",
 					fontWeight: "600",
@@ -160,7 +174,8 @@ export default function WhatWeDo() {
 				Find a topic by its first letter :{" "}
 			</Typography>
 
-			<Box
+
+			<Box 
 				sx={{
 					display: "flex",
 					flexWrap: "wrap",
@@ -270,7 +285,7 @@ export default function WhatWeDo() {
 					>
 						<Box
 							sx={{
-								height: "80px",
+								height: "120px",
 								background: "",
 								margin: "32px 0",
 								backgroundImage:
@@ -278,7 +293,7 @@ export default function WhatWeDo() {
 								backgroundSize: "contain",
 								backgroundRepeat: "no-repeat",
 								backgroundPosition: "center",
-								scale: "0.7",
+								scale: "1",
 							}}
 						></Box>
 						<Box
@@ -464,6 +479,7 @@ export default function WhatWeDo() {
 				</Grid>
 			</Grid>
 		</Box>
+		</Box>
 	);
 }
 
@@ -497,6 +513,7 @@ const Item = ({ number, theme, image, topic, items }) => {
 						border: "1px solid rgba(2,2,2,.5)",
 					}}
 				>
+
 					<Box
 						sx={{
 							height: "120px",

@@ -12,6 +12,7 @@ import AboutUsSlider from "./../about-us-slider";
 import WhatWeDo from "./../services/what-we-do";
 import FrequentlyAsked from "./../f-a-q";
 import Footer from "./../footer";
+import { motion } from "framer-motion";
 
 const GREEN = "#449842";
 const BLUE = "#001842";
@@ -20,7 +21,7 @@ const RED = "#6A2F2F";
 export const Main = () => {
   return (
     <Box>
-                   <Box
+      <Box
         sx={{
           height: "120px",
           width: "65px",
@@ -28,12 +29,12 @@ export const Main = () => {
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          position:'absolute',
-          right:'0',
-          top:'calc(20%)',
+          position: "absolute",
+          right: "0",
+          top: "calc(20%)",
         }}
       />
-                     <Box
+      <Box
         sx={{
           height: "120px",
           width: "65px",
@@ -41,14 +42,14 @@ export const Main = () => {
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          position:'absolute',
-          left:'0',
-          rotate:'180deg',
-          top:'calc(120%)',
+          position: "absolute",
+          left: "0",
+          rotate: "180deg",
+          top: "calc(120%)",
         }}
       />
 
-                           <Box
+      <Box
         sx={{
           height: "120px",
           width: "65px",
@@ -56,10 +57,10 @@ export const Main = () => {
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          position:'absolute',
-          left:'0',
-          rotate:'180deg',
-          top:'calc(320%)',
+          position: "absolute",
+          left: "0",
+          rotate: "180deg",
+          top: "calc(320%)",
         }}
       />
       <Box sx={{ height: "5vh", background: BLUE }} />
@@ -74,48 +75,65 @@ export const Main = () => {
         }}
       />
 
+      <div id="" />
+
       <Box sx={{ width: "90%", margin: "0 auto" }}>
         <Grid container columnSpacing={6}>
           <Grid item xs={12} lg={9} sx={{ padding: "30px", background: "" }}>
             <TitleHeader text={"Health & Wellness Centre Qwa Qwa Campus "} />
 
             <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-              <CardItem
-                image={"/blood-pressure.jpg"}
-                text={"HIgh Blood Pressure"}
-              />
-              <CardItem image={"/hiv.png"} text={"HIV"} />
-              <CardItem image={"/diabetes.jpg"} text={"Diabetes"} />
-              <CardItem image={"/tb.jpg"} text={"Tubercolosis"} />
-              <CardItem text={"See All..."} />
-            </Box>
+              <Box data-aos="fade-right" data-aos-duration="1000">
+                <CardItem
+                  image={"/blood-pressure.jpg"}
+                  text={"HIgh Blood Pressure"}
+                />
+              </Box>
 
-            <Typography
-              sx={{
-                fontSize: "38px",
-                margin: "8px 0",
-                fontWeight: "300",
-                textAlign: "left",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              {" "}
-              <DoctorHeader />{" "}
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "24px",
-                width: "75%",
-                margin: "8px 0",
-                fontWeight: "100",
-                textAlign: "left",
-              }}
-            >
-              {" "}
-              Includes Session Doctors and Primary Health Care by Professional
-              nurses.{" "}
-            </Typography>
+              <Box data-aos="fade-right" data-aos-duration="2000">
+                <CardItem image={"/hiv.png"} text={"HIV"} />
+              </Box>
+
+              <Box data-aos="fade-right" data-aos-duration="3000">
+                <CardItem image={"/diabetes.jpg"} text={"Diabetes"} />
+              </Box>
+
+              <Box data-aos="fade-right" data-aos-duration="4000">
+                <CardItem image={"/tb.jpg"} text={"Tubercolosis"} />
+              </Box>
+
+              <Box data-aos="fade-right" data-aos-duration="5000">
+                <CardItem text={"See All..."} />
+              </Box>
+            </Box>
+            <Box data-aos="fade-bottom" data-aos-duration="5000">
+              <Typography
+                sx={{
+                  fontSize: "38px",
+                  margin: "8px 0",
+                  fontWeight: "300",
+                  textAlign: "left",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                {" "}
+                <DoctorHeader />{" "}
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: "24px",
+                  width: "75%",
+                  margin: "8px 0",
+                  fontWeight: "100",
+                  textAlign: "left",
+                }}
+              >
+                {" "}
+                Includes Session Doctors and Primary Health Care by Professional
+                nurses.{" "}
+              </Typography>
+            </Box>
           </Grid>
           <Grid
             item
@@ -126,60 +144,95 @@ export const Main = () => {
               padding: "115px 0",
             }}
           >
-            <Paper
-              elevation={3}
-              sx={{
-                "&:hover": { cursor: "pointer", background: "rgba(1,1,1,.2)" },
-                margin: "32px 0",
-                width: "100%",
-                height: "100px",
-                borderLeft: "10px solid #001842",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                padding: "0 21px",
-              }}
-            >
-              <SearchIcon sx={{ fontSize: "35px", color: "#001842" }} />
-              <Typography sx={{}}> Find a Nurse </Typography>
-              <ArrowForwardIcon sx={{ color: "#001842" }} />
-            </Paper>
-            <Paper
-              elevation={3}
-              sx={{
-                "&:hover": { cursor: "pointer", background: "rgba(1,1,1,.2)" },
-                margin: "32px 0",
-                width: "100%",
-                height: "100px",
-                borderLeft: "10px solid #001842",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                padding: "0 21px",
-              }}
-            >
-              <TipsAndUpdatesIcon sx={{ fontSize: "35px", color: "#001842" }} />
-              <Typography sx={{}}> Tips </Typography>
-              <ArrowForwardIcon sx={{ color: "#001842" }} />
-            </Paper>
-            <Paper
-              elevation={3}
-              sx={{
-                "&:hover": { cursor: "pointer", background: "rgba(1,1,1,.2)" },
-                margin: "32px 0",
-                width: "100%",
-                height: "100px",
-                borderLeft: "10px solid #001842",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                padding: "0 21px",
-              }}
-            >
-              <CallIcon sx={{ fontSize: "35px", color: "#001842" }} />
-              <Typography sx={{}}> Contact Us </Typography>
-              <ArrowForwardIcon sx={{ color: "#001842" }} />
-            </Paper>
+            <Box data-aos="fade-bottom" data-aos-duration="5000">
+              <Paper
+                className="hero-cards"
+                elevation={3}
+                sx={{
+                  "&:hover": {
+                    cursor: "pointer",
+                    background: "rgba(1,1,1,.2)",
+                  },
+                  margin: "32px 0",
+                  width: "100%",
+                  height: "100px",
+                  borderLeft: "10px solid #001842",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  padding: "0 21px",
+                }}
+              >
+                <SearchIcon
+                  className="hero-card-icon-search"
+                  sx={{ fontSize: "35px", color: "#001842" }}
+                />
+                <Typography className={"card-text"} sx={{}}>
+                  {" "}
+                  Find a Nurse{" "}
+                </Typography>
+                <ArrowForwardIcon
+                  className="hero-card-icon"
+                  sx={{ color: "#001842" }}
+                />
+              </Paper>
+            </Box>
+            <Box data-aos="fade-bottom" data-aos-duration="5000">
+              <Paper
+                className="hero-cards"
+                elevation={3}
+                sx={{
+                  "&:hover": {
+                    cursor: "pointer",
+                    background: "rgba(1,1,1,.2)",
+                  },
+                  margin: "32px 0",
+                  width: "100%",
+                  height: "100px",
+                  borderLeft: "10px solid #001842",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  padding: "0 21px",
+                }}
+              >
+                <TipsAndUpdatesIcon
+                  sx={{ fontSize: "35px", color: "#001842" }}
+                />
+                <Typography sx={{}}> Tips </Typography>
+                <ArrowForwardIcon
+                  className="hero-card-icon"
+                  sx={{ color: "#001842" }}
+                />
+              </Paper>
+            </Box>
+            <Box data-aos="fade-bottom" data-aos-duration="5000">
+              <Paper
+                className="hero-cards"
+                elevation={3}
+                sx={{
+                  "&:hover": {
+                    cursor: "pointer",
+                    background: "rgba(1,1,1,.2)",
+                  },
+                  margin: "32px 0",
+                  width: "100%",
+                  height: "100px",
+                  borderLeft: "10px solid #001842",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  padding: "0 21px",
+                }}
+              >
+                <CallIcon sx={{ fontSize: "35px", color: "#001842" }} />
+                <Typography sx={{}}> Contact Us </Typography>
+                <ArrowForwardIcon
+                  className="hero-card-icon"
+                  sx={{ color: "#001842" }}
+                />
+              </Paper>
+            </Box>
           </Grid>
 
           <Grid
@@ -191,22 +244,26 @@ export const Main = () => {
               background: "",
             }}
           >
-            <Box
-              sx={{
-                height: "300px",
-                width: "50%",
-                margin: "auto auto",
-                backgroundPosition: "center",
-                backgroundImage: "url('/student-using.jpg')",
-                backgroundSize: "contain",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            />
-            <Typography sx={{ textAlign: "center" }}>
-              {" "}
-              Access quickly to the availablility of all your practitioners{" "}
-            </Typography>
+            <Box data-aos="fade-left" data-aos-duration="2000">
+              <Box
+                sx={{
+                  height: "300px",
+                  width: "50%",
+                  margin: "auto auto",
+                  backgroundPosition: "center",
+                  backgroundImage: "url('/student-using.jpg')",
+                  backgroundSize: "contain",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              />
+              <Box data-aos="fade-bottom" data-aos-duration="3000">
+                <Typography sx={{ textAlign: "center" }}>
+                  {" "}
+                  Access quickly to the availablility of all your practitioners{" "}
+                </Typography>
+              </Box>
+            </Box>
           </Grid>
           <Grid
             xs={12}
@@ -217,22 +274,26 @@ export const Main = () => {
               background: "",
             }}
           >
-            <Box
-              sx={{
-                height: "300px",
-                width: "50%",
-                margin: "auto auto",
-                backgroundPosition: "center",
-                backgroundImage: "url('/practitioners.jpg')",
-                backgroundSize: "contain",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            />
-            <Typography sx={{ textAlign: "center" }}>
-              {" "}
-              A company of practitioners to accompany you.{" "}
-            </Typography>
+            <Box data-aos="fade-bottom" data-aos-duration="2000">
+              <Box
+                sx={{
+                  height: "300px",
+                  width: "50%",
+                  margin: "auto auto",
+                  backgroundPosition: "center",
+                  backgroundImage: "url('/practitioners.jpg')",
+                  backgroundSize: "contain",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              />
+              <Box data-aos="fade-bottom" data-aos-duration="3000">
+                <Typography sx={{ textAlign: "center" }}>
+                  {" "}
+                  A company of practitioners to accompany you.{" "}
+                </Typography>
+              </Box>
+            </Box>
           </Grid>
           <Grid
             xs={12}
@@ -243,35 +304,43 @@ export const Main = () => {
               background: "",
             }}
           >
-            <Box
-              sx={{
-                height: "300px",
-                width: "50%",
-                margin: "auto auto",
-                backgroundPosition: "center",
-                backgroundImage: "url('/appointment-booking.jpg')",
-                backgroundSize: "contain",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            />
-            <Typography sx={{ textAlign: "center" }}>
-              {" "}
-              Manage your Appointments and get health tips as well.{" "}
-            </Typography>
+            <Box data-aos="fade-right" data-aos-duration="2000">
+              <Box
+                sx={{
+                  height: "300px",
+                  width: "50%",
+                  margin: "auto auto",
+                  backgroundPosition: "center",
+                  backgroundImage: "url('/appointment-booking.jpg')",
+                  backgroundSize: "contain",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              />
+              <Box data-aos="fade-bottom" data-aos-duration="3000">
+                <Typography sx={{ textAlign: "center" }}>
+                  {" "}
+                  Manage your Appointments and get health tips as well.{" "}
+                </Typography>
+              </Box>
+            </Box>
           </Grid>
         </Grid>
 
         <Typography sx={{ fontWeight: "600", color: GREEN, fontSize: "40px" }}>
           {"Campaigns"}
         </Typography>
-        <Box sx={{ margin: "50px 0" }}>
+        <Box
+          data-aos="fade-bottom"
+          data-aos-duration="2000"
+          sx={{ margin: "50px 0" }}
+        >
           <Typography
             sx={{
               fontWeight: "600",
               color: "rgba(1, 1, 1, 0.5)",
               fontSize: "32px",
-              textAlign: "center",
+              textAlign: "",
               margin: "40px 0",
             }}
           >
@@ -280,13 +349,13 @@ export const Main = () => {
           <Carousel />
         </Box>
 
-        <Box sx={{ margin: "50px 0" }}>
+        <Box data-aos="fade-bottom" data-aos-duration="2000" sx={{ margin: "50px 0" }}>
           <Typography
             sx={{
               fontWeight: "600",
               color: "rgba(1, 1, 1, 0.5)",
               fontSize: "32px",
-              textAlign: "center",
+              textAlign: "",
               margin: "40px 0",
             }}
           >
@@ -295,13 +364,13 @@ export const Main = () => {
           <Carousel />
         </Box>
 
-        <Box sx={{ margin: "50px 0" }}>
+        <Box data-aos="fade-bottom" data-aos-duration="2000" sx={{ margin: "50px 0" }}>
           <Typography
             sx={{
               fontWeight: "600",
               color: "rgba(1, 1, 1, 0.5)",
               fontSize: "32px",
-              textAlign: "center",
+              textAlign: "",
               margin: "40px 0",
             }}
           >
@@ -310,6 +379,7 @@ export const Main = () => {
           <Carousel />
         </Box>
       </Box>
+      
       <Box
         sx={{
           height: "35vh",
@@ -325,7 +395,7 @@ export const Main = () => {
         <TitleHeader text={"About Us "} />
 
         <Grid container>
-          <Grid
+          <Grid 
             item
             xs={12}
             lg={4}
@@ -348,7 +418,9 @@ export const Main = () => {
               padding: { xs: "50px 0", lg: "0 32px" },
             }}
           >
+          <Box data-aos="fade-right" data-aos-duration="2000" >
             <Typography
+              className={"tracking-in-expand"}
               sx={{
                 textAlign: "justify",
                 fontSize: "21px",
@@ -359,8 +431,10 @@ export const Main = () => {
                 "The University of the Free State (UFS) School Clinic is a comprehensive medical facility that provides high-quality care to registered UFS staff and students. Our experienced team of healthcare professionals is dedicated to promoting well-being and providing innovative healthcare solutions. We emphasize compassionate care, advanced technology, and medical expertise."
               }
             </Typography>
-
+</Box>
             <br />
+            <Box data-aos="flip-up" data-aos-duration="800" >
+
             <Typography
               sx={{
                 textAlign: "justify",
@@ -370,6 +444,7 @@ export const Main = () => {
             >
               {"We offer a wide range of services, including:"}
             </Typography>
+</Box>
             <br />
             <Typography
               sx={{
@@ -379,12 +454,12 @@ export const Main = () => {
               }}
             >
               <ul style={{ padding: "0 32px" }}>
-                <li>Medical examinations</li>
-                <li>Treatment of minor illnesses and injuries</li>
-                <li>Screening for sexually transmitted diseases (STDs)</li>
-                <li>Pregnancy tests</li>
-                <li>Psychosocial counseling</li>
-                <li>Health education and promotion</li>
+                <li  data-aos="fade-bottom" data-aos-duration="2000">Medical examinations</li>
+                <li  data-aos="fade-bottom" data-aos-duration="2100">Treatment of minor illnesses and injuries</li>
+                <li  data-aos="fade-bottom" data-aos-duration="2200">Screening for sexually transmitted diseases (STDs)</li>
+                <li  data-aos="fade-bottom" data-aos-duration="2300">Pregnancy tests</li>
+                <li  data-aos="fade-bottom" data-aos-duration="2400">Psychosocial counseling</li>
+                <li  data-aos="fade-bottom" data-aos-duration="2500">Health education and promotion</li>
               </ul>
               <br />
             </Typography>
@@ -400,15 +475,19 @@ export const Main = () => {
               }
             </Typography>
             <br />
+
           </Grid>
         </Grid>
         <Box sx={{ margin: "100px 0" }}>
+            <Box data-aos="zoom-in" data-aos-duration="800" >
+         
           <Typography
             sx={{ fontSize: "34px", fontWeight: "600", margin: "100px 0" }}
           >
             {" "}
             {"Exploring The Frontiers of Health: Articles and Blogs"}{" "}
           </Typography>
+        </Box>
 
           <AboutUsSlider />
         </Box>
@@ -416,6 +495,8 @@ export const Main = () => {
       <Box
         sx={{ background: GREEN, padding: "50px", margin: "50px 0 100px 0" }}
       >
+            <Box data-aos="fade-down" data-aos-duration="1000" >
+
         <Typography
           sx={{
             fontSize: "50px",
@@ -426,6 +507,8 @@ export const Main = () => {
         >
           WHAT WE DO
         </Typography>
+
+      </Box>
       </Box>
 
       <WhatWeDo />
@@ -512,17 +595,19 @@ export const Navbar = () => {
 
 const TitleHeader = ({ text }) => {
   return (
-    <Typography
-      sx={{
-        fontSize: "34px",
-        fontWeight: "600",
-        margin: "32px 0",
-        color: GREEN,
-      }}
-    >
-      {" "}
-      {text}{" "}
-    </Typography>
+    <Box data-aos="slide-down" data-aos-duration="4000">
+      <Typography
+        sx={{
+          fontSize: "34px",
+          fontWeight: "600",
+          margin: "32px 0",
+          color: GREEN,
+        }}
+      >
+        {" "}
+        {text}{" "}
+      </Typography>
+    </Box>
   );
 };
 
@@ -709,12 +794,16 @@ function NavItem({ text, doctors }) {
                     <Typography
                       key={index}
                       sx={{
-                        padding: "12px 0",
+                        padding: "16px 0",
                         cursor: "pointer",
                         width: "50%",
                         textAlign: "center",
-                        border: "1px solid black",
                         margin: "auto auto",
+                        borderRadius: "42px",
+                        "&:hover": {
+                          background: GREEN,
+                          color: "white",
+                        },
                       }}
                     >
                       {item}

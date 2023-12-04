@@ -15,9 +15,7 @@ export default function Carousel() {
   return (
     <>
       <Swiper
-        slidesPerView={4}
-        spaceBetween={30}
-        centeredSlides={true}
+        centeredSlides={false}
         scrollbar={{
           hide: true,
         }}
@@ -25,48 +23,62 @@ export default function Carousel() {
         className="mySwiper"
       >
         <SwiperSlide>
+          <Box data-aos="fade-right" data-aos-duration="2000">
+
           <Box
             sx={{
               backgroundImage: "url('/poster-1.png')",
-              backgroundSize: "cover",
+              backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
-              objectFit: "cover",
-              width: "100%",
+              width: { md: "250px", lg: "100%" },
               borderRadius: "32px",
-              height: "70vh",
+              margin: "0",
+              height: { xs: "50vh", lg: "70vh" },
+              
             }}
           />
+          </Box>
         </SwiperSlide>
+
         <SwiperSlide>
+          <Box data-aos="fade-right" data-aos-duration="3000">
+
           <Box
             sx={{
               backgroundImage: "url('/poster-2.png')",
-              backgroundSize: "cover",
+              backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
-              objectFit: "cover",
-              width: "100%",
+              width: { md: "250px", lg: "100%" },
               borderRadius: "32px",
-              height: "70vh",
+              margin: "0",
+              height: { xs: "50vh", lg: "70vh" },
+              
             }}
           />
+          </Box>
         </SwiperSlide>
-        <SwiperSlide>
+
+                <SwiperSlide>
+          <Box data-aos="fade-right" data-aos-duration="4000">
+
           <Box
             sx={{
               backgroundImage: "url('/poster-3.png')",
-              backgroundSize: "cover",
+              backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
-              objectFit: "cover",
-              width: "100%",
+              width: { md: "250px", lg: "100%" },
               borderRadius: "32px",
-
-              height: "70vh",
+              margin: "0",
+              height: { xs: "50vh", lg: "70vh" },
+              
             }}
           />
+          </Box>
         </SwiperSlide>
+
       </Swiper>
     </>
   );
