@@ -82,7 +82,7 @@ export const Main = () => {
           <Grid item xs={12} lg={9} sx={{ padding: "30px", background: "" }}>
             <TitleHeader text={"Health & Wellness Centre Qwa Qwa Campus "} />
 
-            <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+            <Box sx={{ display: "flex", justifyContent: "space-between" , flexWrap:'wrap' }}>
               <Box data-aos="fade-right" data-aos-duration="1000">
                 <CardItem
                   image={"/blood-pressure.jpg"}
