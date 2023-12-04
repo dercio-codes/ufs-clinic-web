@@ -285,7 +285,7 @@ background:'rgba(0,24,66,0.3)',
 					>
 						<Box
 							sx={{
-								height: "120px",
+								height: { xs:"65px" , lg:"120px"},
 								background: "",
 								margin: "32px 0",
 								backgroundImage:
@@ -505,8 +505,8 @@ const Item = ({ number, theme, image, topic, items }) => {
 			>
 				<Box
 					sx={{
-						height: "180px",
-						width: "180px",
+						height: { xs:'75px', lg:"180px"},
+						width: { xs:'75px', lg:"180px"},
 						display: "flex",
 						alignItems: "center",
 						justifyContent: "center",
@@ -516,8 +516,8 @@ const Item = ({ number, theme, image, topic, items }) => {
 
 					<Box
 						sx={{
-							height: "120px",
-							width: "120px",
+							height: { xs:"65px" , lg:"120px"},
+							width: { xs:"65px" , lg:"120px"},
 							backgroundImage: `url("/${image}")`,
 							margin: "auto auto",
 							backgroundSize: "contain",
@@ -533,7 +533,7 @@ const Item = ({ number, theme, image, topic, items }) => {
 						justifyContent: "center",
 						height: "100px",
 						background: theme,
-						padding: "50px",
+						padding: { xs:'0 12px' , lg:"50px"},
 						margin: "0",
 					}}
 				>
@@ -601,8 +601,8 @@ const ItemSmall = ({ number, theme, image, topic, items }) => {
 			>
 				<Box
 					sx={{
-						height: "180px",
-						width: "180px",
+						height: { xs:'75px', lg:"180px"},
+						width: { xs:'75px', lg:"180px"},
 						display: "flex",
 						alignItems: "center",
 						justifyContent: "center",
@@ -611,8 +611,8 @@ const ItemSmall = ({ number, theme, image, topic, items }) => {
 				>
 					<Box
 						sx={{
-							height: "120px",
-							width: "120px",
+							height: { xs:"65px" , lg:"120px"},
+							width: { xs:"65px" , lg:"120px"},
 							backgroundImage: `url("/${image}")`,
 							margin: "auto auto",
 							backgroundSize: "contain",
@@ -628,7 +628,7 @@ const ItemSmall = ({ number, theme, image, topic, items }) => {
 						justifyContent: "center",
 						height: "100px",
 						background: theme,
-						padding: "50px",
+						padding: { xs:'0 12px' , lg:"50px"},
 						margin: "0",
 					}}
 				>

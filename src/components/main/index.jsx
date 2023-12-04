@@ -79,7 +79,7 @@ export const Main = () => {
 
       <Box sx={{ width: "90%", margin: "0 auto" }}>
         <Grid container>
-          <Grid item xs={12} lg={9} sx={{ padding: "30px", background: "" }}>
+          <Grid item xs={12} lg={9} sx={{ padding: "12px 0", background: "" }}>
             <TitleHeader text={"Health & Wellness Centre Qwa Qwa Campus "} />
 
             <Box sx={{ display: "flex", justifyContent: "space-between" , flexWrap:'wrap' }}>
