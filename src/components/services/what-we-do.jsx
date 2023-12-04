@@ -539,7 +539,7 @@ const Item = ({ number, theme, image, topic, items }) => {
 				>
 					<Typography
 						sx={{
-							fontSize: "28px",
+							fontSize: { xs: "13px" , lg:"28px"},
 							fontWeight: "600",
 							color: "white",
 							textAlign: "center",
@@ -634,7 +634,7 @@ const ItemSmall = ({ number, theme, image, topic, items }) => {
 				>
 					<Typography
 						sx={{
-							fontSize: "28px",
+							fontSize: { xs: "13px" , lg:"28px"},
 							fontWeight: "600",
 							color: "white",
 							textAlign: "center",
