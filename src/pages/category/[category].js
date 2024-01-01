@@ -69,7 +69,7 @@ const CategoryPage = () => {
                 padding: "21px 0"
               }}
             >
-              <Grid item xs={6}>
+              <Grid item xs={12} md={6}>
                 <Typography sx={{ fontSize: "21px", fontWeight: "300" }}>
                   {" "}
                   {item.Tip}{" "}
@@ -85,7 +85,7 @@ const CategoryPage = () => {
                   {item.Description}
                 </Typography>
               </Grid>
-              <Grid item xs={6} sx={{ height: "250px" }}>
+              <Grid item xs={12} md={6} sx={{ height: "250px" }}>
                 <Box
                   sx={{
                     width: "250px",
