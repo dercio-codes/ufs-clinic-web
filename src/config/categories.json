@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Health and Wellness",
+    "color": "#111"
+  },
+  {
+    "title": "Stress Management",
+    "color": "#ff5b5b"
+  },
+  {
+    "title": "Healthy Eating",
+    "color": "#00b91e"
+  },
+  {
+    "title": "Sleep Hygiene",
+    "color": "#8a4dff"
+  },
+  {
+    "title": "Exercise and Fitness",
+    "color": "#ffa31a"
+  },
+  {
+    "title": "Campus Safety",
+    "color": "#007bff"
+  },
+  {
+    "title": "Sexual Health Education",
+    "color": "#fe5e51"
+  },
+  {
+    "title": "Mental Health Support",
+    "color": "#ff6b81"
+  },
+  {
+    "title": "Managing Relationships",
+    "color": "#ff99cc"
+  },
+  {
+    "title": "Study Techniques",
+    "color": "#00e0fc"
+  }
+]

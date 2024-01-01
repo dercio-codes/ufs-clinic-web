@@ -13,6 +13,8 @@ import WhatWeDo from "./../services/what-we-do";
 import FrequentlyAsked from "./../f-a-q";
 import Footer from "./../footer";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import categoriesData from "./../../config/categories.json";
 
 const GREEN = "#449842";
 const BLUE = "#001842";
@@ -31,7 +33,7 @@ export const Main = () => {
           backgroundRepeat: "no-repeat",
           position: "absolute",
           right: "0",
-          top: "calc(20%)",
+          top: "calc(20%)"
         }}
       />
       <Box
@@ -45,7 +47,7 @@ export const Main = () => {
           position: "absolute",
           left: "0",
           rotate: "180deg",
-          top: "calc(120%)",
+          top: "calc(120%)"
         }}
       />
 
@@ -60,7 +62,7 @@ export const Main = () => {
           position: "absolute",
           left: "0",
           rotate: "180deg",
-          top: "calc(320%)",
+          top: "calc(320%)"
         }}
       />
       <Box sx={{ height: "5vh", background: BLUE }} />
@@ -71,7 +73,7 @@ export const Main = () => {
           padding: "30px",
           backgroundImage: "url('/qwaqwa-banner.jpg')",
           backgroundSize: { xs: "cover", lg: "cover" },
-          backgroundPosition: "left center",
+          backgroundPosition: "left center"
         }}
       />
 
@@ -82,7 +84,13 @@ export const Main = () => {
           <Grid item xs={12} lg={9} sx={{ padding: "12px 0", background: "" }}>
             <TitleHeader text={"Health & Wellness Centre Qwa Qwa Campus "} />
 
-            <Box sx={{ display: "flex", justifyContent: "space-between" , flexWrap:'wrap' }}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                flexWrap: "wrap"
+              }}
+            >
               <Box data-aos="fade-right" data-aos-duration="1000">
                 <CardItem
                   image={"/blood-pressure.jpg"}
@@ -114,7 +122,7 @@ export const Main = () => {
                   fontWeight: "300",
                   textAlign: "left",
                   display: "flex",
-                  alignItems: "center",
+                  alignItems: "center"
                 }}
               >
                 {" "}
@@ -123,10 +131,10 @@ export const Main = () => {
               <Typography
                 sx={{
                   fontSize: "24px",
-                  width: { xs:'100%' , lg: "75%"},
+                  width: { xs: "100%", lg: "75%" },
                   margin: "8px 0",
                   fontWeight: "100",
-                  textAlign: "left",
+                  textAlign: "left"
                 }}
               >
                 {" "}
@@ -141,7 +149,7 @@ export const Main = () => {
             lg={3}
             sx={{
               alignItems: "center",
-              padding: "115px 0",
+              padding: "115px 0"
             }}
           >
             <Box data-aos="fade-bottom" data-aos-duration="5000">
@@ -151,7 +159,7 @@ export const Main = () => {
                 sx={{
                   "&:hover": {
                     cursor: "pointer",
-                    background: "rgba(1,1,1,.2)",
+                    background: "rgba(1,1,1,.2)"
                   },
                   margin: "32px 0",
                   width: "100%",
@@ -160,7 +168,7 @@ export const Main = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  padding: "0 21px",
+                  padding: "0 21px"
                 }}
               >
                 <SearchIcon
@@ -184,7 +192,7 @@ export const Main = () => {
                 sx={{
                   "&:hover": {
                     cursor: "pointer",
-                    background: "rgba(1,1,1,.2)",
+                    background: "rgba(1,1,1,.2)"
                   },
                   margin: "32px 0",
                   width: "100%",
@@ -193,7 +201,7 @@ export const Main = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  padding: "0 21px",
+                  padding: "0 21px"
                 }}
               >
                 <TipsAndUpdatesIcon
@@ -213,7 +221,7 @@ export const Main = () => {
                 sx={{
                   "&:hover": {
                     cursor: "pointer",
-                    background: "rgba(1,1,1,.2)",
+                    background: "rgba(1,1,1,.2)"
                   },
                   margin: "32px 0",
                   width: "100%",
@@ -222,7 +230,7 @@ export const Main = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  padding: "0 21px",
+                  padding: "0 21px"
                 }}
               >
                 <CallIcon sx={{ fontSize: "35px", color: "#001842" }} />
@@ -242,10 +250,10 @@ export const Main = () => {
               margin: "32px auto",
               height: "350px",
               background: "",
-              display:'flex',
-              flexDirection:'column',
-              alignItems:'center',
-              justifyContent:'center'
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center"
             }}
           >
             <Box data-aos="fade-left" data-aos-duration="2000">
@@ -258,7 +266,7 @@ export const Main = () => {
                   backgroundImage: "url('/student-using.jpg')",
                   backgroundSize: "contain",
                   backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
+                  backgroundRepeat: "no-repeat"
                 }}
               />
               <Box data-aos="fade-bottom" data-aos-duration="3000">
@@ -276,10 +284,10 @@ export const Main = () => {
               margin: "32px auto",
               height: "350px",
               background: "",
-              display:'flex',
-              flexDirection:'column',
-              alignItems:'center',
-              justifyContent:'center'
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center"
             }}
           >
             <Box data-aos="fade-bottom" data-aos-duration="2000">
@@ -292,7 +300,7 @@ export const Main = () => {
                   backgroundImage: "url('/practitioners.jpg')",
                   backgroundSize: "contain",
                   backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
+                  backgroundRepeat: "no-repeat"
                 }}
               />
               <Box data-aos="fade-bottom" data-aos-duration="3000">
@@ -310,10 +318,10 @@ export const Main = () => {
               margin: "32px auto",
               height: "350px",
               background: "",
-              display:'flex',
-              flexDirection:'column',
-              alignItems:'center',
-              justifyContent:'center'
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center"
             }}
           >
             <Box data-aos="fade-right" data-aos-duration="2000">
@@ -326,7 +334,7 @@ export const Main = () => {
                   backgroundImage: "url('/appointment-booking.jpg')",
                   backgroundSize: "contain",
                   backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
+                  backgroundRepeat: "no-repeat"
                 }}
               />
               <Box data-aos="fade-bottom" data-aos-duration="3000">
@@ -353,7 +361,7 @@ export const Main = () => {
               color: "rgba(1, 1, 1, 0.5)",
               fontSize: "32px",
               textAlign: "",
-              margin: "40px 0",
+              margin: "40px 0"
             }}
           >
             {"Womens Health"}
@@ -361,14 +369,18 @@ export const Main = () => {
           <Carousel />
         </Box>
 
-        <Box data-aos="fade-bottom" data-aos-duration="2000" sx={{ margin: "50px 0" }}>
+        <Box
+          data-aos="fade-bottom"
+          data-aos-duration="2000"
+          sx={{ margin: "50px 0" }}
+        >
           <Typography
             sx={{
               fontWeight: "600",
               color: "rgba(1, 1, 1, 0.5)",
               fontSize: "32px",
               textAlign: "",
-              margin: "40px 0",
+              margin: "40px 0"
             }}
           >
             {"Mens Health"}
@@ -376,14 +388,18 @@ export const Main = () => {
           <Carousel />
         </Box>
 
-        <Box data-aos="fade-bottom" data-aos-duration="2000" sx={{ margin: "50px 0" }}>
+        <Box
+          data-aos="fade-bottom"
+          data-aos-duration="2000"
+          sx={{ margin: "50px 0" }}
+        >
           <Typography
             sx={{
               fontWeight: "600",
               color: "rgba(1, 1, 1, 0.5)",
               fontSize: "32px",
               textAlign: "",
-              margin: "40px 0",
+              margin: "40px 0"
             }}
           >
             {"Protective Sex Health"}
@@ -391,7 +407,7 @@ export const Main = () => {
           <Carousel />
         </Box>
       </Box>
-      
+
       <Box
         sx={{
           height: "35vh",
@@ -400,14 +416,14 @@ export const Main = () => {
           backgroundSize: "fill",
           backgroundAttachment: "fixed",
           backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+          backgroundRepeat: "no-repeat"
         }}
       />
       <Box sx={{ width: "90%", margin: "120px auto" }}>
         <TitleHeader text={"About Us "} />
 
         <Grid container>
-          <Grid 
+          <Grid
             item
             xs={12}
             lg={4}
@@ -417,7 +433,7 @@ export const Main = () => {
               backgroundSize: "cover",
               margin: "0 0 0 0",
               backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
+              backgroundRepeat: "no-repeat"
             }}
           />
           <Grid
@@ -427,51 +443,62 @@ export const Main = () => {
             sx={{
               minHeight: "500px",
               background: "",
-              padding: { xs: "50px 0", lg: "0 32px" },
+              padding: { xs: "50px 0", lg: "0 32px" }
             }}
           >
-          <Box data-aos="fade-right" data-aos-duration="2000" >
-            <Typography
-              className={"tracking-in-expand"}
-              sx={{
-                textAlign: "justify",
-                fontSize: "21px",
-                lineHeight: "42px",
-              }}
-            >
-              {
-                "The University of the Free State (UFS) School Clinic is a comprehensive medical facility that provides high-quality care to registered UFS staff and students. Our experienced team of healthcare professionals is dedicated to promoting well-being and providing innovative healthcare solutions. We emphasize compassionate care, advanced technology, and medical expertise."
-              }
-            </Typography>
-</Box>
+            <Box data-aos="fade-right" data-aos-duration="2000">
+              <Typography
+                className={"tracking-in-expand"}
+                sx={{
+                  textAlign: "justify",
+                  fontSize: "21px",
+                  lineHeight: "42px"
+                }}
+              >
+                {
+                  "The University of the Free State (UFS) School Clinic is a comprehensive medical facility that provides high-quality care to registered UFS staff and students. Our experienced team of healthcare professionals is dedicated to promoting well-being and providing innovative healthcare solutions. We emphasize compassionate care, advanced technology, and medical expertise."
+                }
+              </Typography>
+            </Box>
             <br />
-            <Box data-aos="flip-up" data-aos-duration="800" >
-
-            <Typography
-              sx={{
-                textAlign: "justify",
-                fontSize: "21px",
-                lineHeight: "42px",
-              }}
-            >
-              {"We offer a wide range of services, including:"}
-            </Typography>
-</Box>
+            <Box data-aos="flip-up" data-aos-duration="800">
+              <Typography
+                sx={{
+                  textAlign: "justify",
+                  fontSize: "21px",
+                  lineHeight: "42px"
+                }}
+              >
+                {"We offer a wide range of services, including:"}
+              </Typography>
+            </Box>
             <br />
             <Typography
               sx={{
                 textAlign: "justify",
                 fontSize: "21px",
-                lineHeight: "42px",
+                lineHeight: "42px"
               }}
             >
               <ul style={{ padding: "0 32px" }}>
-                <li  data-aos="fade-bottom" data-aos-duration="2000">Medical examinations</li>
-                <li  data-aos="fade-bottom" data-aos-duration="2100">Treatment of minor illnesses and injuries</li>
-                <li  data-aos="fade-bottom" data-aos-duration="2200">Screening for sexually transmitted diseases (STDs)</li>
-                <li  data-aos="fade-bottom" data-aos-duration="2300">Pregnancy tests</li>
-                <li  data-aos="fade-bottom" data-aos-duration="2400">Psychosocial counseling</li>
-                <li  data-aos="fade-bottom" data-aos-duration="2500">Health education and promotion</li>
+                <li data-aos="fade-bottom" data-aos-duration="2000">
+                  Medical examinations
+                </li>
+                <li data-aos="fade-bottom" data-aos-duration="2100">
+                  Treatment of minor illnesses and injuries
+                </li>
+                <li data-aos="fade-bottom" data-aos-duration="2200">
+                  Screening for sexually transmitted diseases (STDs)
+                </li>
+                <li data-aos="fade-bottom" data-aos-duration="2300">
+                  Pregnancy tests
+                </li>
+                <li data-aos="fade-bottom" data-aos-duration="2400">
+                  Psychosocial counseling
+                </li>
+                <li data-aos="fade-bottom" data-aos-duration="2500">
+                  Health education and promotion
+                </li>
               </ul>
               <br />
             </Typography>
@@ -479,7 +506,7 @@ export const Main = () => {
               sx={{
                 textAlign: "justify",
                 fontSize: "21px",
-                lineHeight: "42px",
+                lineHeight: "42px"
               }}
             >
               {
@@ -487,19 +514,17 @@ export const Main = () => {
               }
             </Typography>
             <br />
-
           </Grid>
         </Grid>
         <Box sx={{ margin: "100px 0" }}>
-            <Box data-aos="zoom-in" data-aos-duration="800" >
-         
-          <Typography
-            sx={{ fontSize: "34px", fontWeight: "600", margin: "100px 0" }}
-          >
-            {" "}
-            {"Exploring The Frontiers of Health: Articles and Blogs"}{" "}
-          </Typography>
-        </Box>
+          <Box data-aos="zoom-in" data-aos-duration="800">
+            <Typography
+              sx={{ fontSize: "34px", fontWeight: "600", margin: "100px 0" }}
+            >
+              {" "}
+              {"Exploring The Frontiers of Health: Articles and Blogs"}{" "}
+            </Typography>
+          </Box>
 
           <AboutUsSlider />
         </Box>
@@ -507,20 +532,19 @@ export const Main = () => {
       <Box
         sx={{ background: GREEN, padding: "50px", margin: "50px 0 100px 0" }}
       >
-            <Box data-aos="fade-down" data-aos-duration="1000" >
-
-        <Typography
-          sx={{
-            fontSize: "50px",
-            fontWeight: "900",
-            color: "white",
-            textAlign: "center",
-          }}
-        >
-          WHAT WE DO
-        </Typography>
-
-      </Box>
+        <Box data-aos="fade-down" data-aos-duration="1000">
+          <Typography
+            id="what-we-do"
+            sx={{
+              fontSize: "50px",
+              fontWeight: "900",
+              color: "white",
+              textAlign: "center"
+            }}
+          >
+            WHAT WE DO
+          </Typography>
+        </Box>
       </Box>
 
       <WhatWeDo />
@@ -532,7 +556,7 @@ export const Main = () => {
           backgroundImage: "url('/builing-banner.jpg')",
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
-          backgroundPosition: "bottom",
+          backgroundPosition: "bottom"
         }}
       />
       <Box sx={{ width: "90%", margin: "120px auto 21px auto" }}>
@@ -581,7 +605,7 @@ export const Navbar = () => {
             backgroundImage: "url('/qwaqwa-logo.jpg')",
             backgroundSize: "contain",
             backgroundPosition: "left",
-            backgroundRepeat: "no-repeat",
+            backgroundRepeat: "no-repeat"
           }}
         ></Grid>
         <Grid
@@ -592,13 +616,13 @@ export const Navbar = () => {
             background: "",
             display: "flex",
             alignItems: "center",
-            justifyContent: "space-evenly",
+            justifyContent: "space-evenly"
           }}
         >
-          <NavItem doctors={doctors} text={"Health Tips "} />
-          <NavItem doctors={sicknesses} text={"Campaigns"} />
-          <NavItem doctors={about} text={"About"} />
-          <NavItem doctors={false} text={"Login "} />
+          <NavItem listItems={categoriesData} text={"Health Tips "} />
+          <NavItem listItems={false} page={"campaigns"} text={"Campaigns"} />
+          <NavItem listItems={false} page={"/#what-we-do"} text={"About"} />
+          <NavItem listItems={false} page={"/contact"} text={"contact"} />
         </Grid>
       </Grid>
     </Box>
@@ -613,7 +637,7 @@ const TitleHeader = ({ text }) => {
           fontSize: "34px",
           fontWeight: "600",
           margin: "32px 0",
-          color: GREEN,
+          color: GREEN
         }}
       >
         {" "}
@@ -633,7 +657,7 @@ const CardItem = ({ text, image }) => {
           backgroundImage: `url('${image}')`,
           backgroundSize: "contain",
           backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+          backgroundRepeat: "no-repeat"
         }}
       />
       <Typography
@@ -641,7 +665,7 @@ const CardItem = ({ text, image }) => {
           fontSize: "16px",
           margin: "8px 0",
           fontWeight: "600",
-          textAlign: "center",
+          textAlign: "center"
         }}
       >
         {" "}
@@ -740,7 +764,7 @@ const sicknesses = [
   "Urinary tract infections",
   "Viral meningitis",
   "West Nile virus",
-  "Zika virus disease",
+  "Zika virus disease"
 ];
 
 const doctors = [
@@ -759,15 +783,15 @@ const doctors = [
   "Therapist.",
   "Psychiatrist.",
   "Academic Advisor.",
-  "Therapist.",
+  "Therapist."
 ];
 
 const about = ["Our Story", "Our Vision", "Our Values", "Our Partners"];
-function NavItem({ text, doctors }) {
+function NavItem({ text, listItems, page }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    if (doctors !== false) {
+  const handleClick = event => {
+    if (listItems !== false) {
       setAnchorEl(event.currentTarget);
     }
   };
@@ -777,16 +801,18 @@ function NavItem({ text, doctors }) {
 
   return (
     <div>
-      <Button
-        id="basic-button"
-        aria-controls={open ? "basic-menu" : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
-        onMouseEnter={handleClick}
-        sx={{ fontSize: "12px", color: BLUE }}
-      >
-        {text}
-      </Button>
+      <Link href={`/${page}`} as={`/${page}`} style={{ width: "50%" }}>
+        <Button
+          id="basic-button"
+          aria-controls={open ? "basic-menu" : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? "true" : undefined}
+          onMouseEnter={handleClick}
+          sx={{ fontSize: "12px", color: BLUE }}
+        >
+          {text}
+        </Button>
+      </Link>
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}
@@ -794,32 +820,44 @@ function NavItem({ text, doctors }) {
         onClose={handleClose}
         onMouseLeave={handleClose}
         MenuListProps={{
-          "aria-labelledby": "basic-button",
+          "aria-labelledby": "basic-button"
         }}
       >
-        <Box sx={{ width: "800px", minHeight: "50vh", background: "" }}>
+        <Box sx={{ width: "800px", minHeight: "30vh", background: "" }}>
           <Grid container>
             <Grid item xs={12} sx={{ display: "flex", flexWrap: "wrap" }}>
-              {doctors &&
-                doctors.map((item, index) => {
+              {listItems &&
+                listItems.map((item, index) => {
                   return (
-                    <Typography
+                    <Link
+                      href={`/category/${item.title
+                        .replaceAll(" ", "-")
+                        .toLowerCase()}`}
+                      as={`/category/${item.title
+                        .replaceAll(" ", "-")
+                        .toLowerCase()}`}
                       key={index}
-                      sx={{
-                        padding: "16px 0",
-                        cursor: "pointer",
-                        width: "50%",
-                        textAlign: "center",
-                        margin: "auto auto",
-                        borderRadius: "42px",
-                        "&:hover": {
-                          background: GREEN,
-                          color: "white",
-                        },
-                      }}
+                      style={{ width: "50%" }}
                     >
-                      {item}
-                    </Typography>
+                      <Typography
+                        className="nav-hover"
+                        sx={{
+                          padding: "16px 0",
+                          cursor: "pointer",
+                          width: "100%",
+                          textAlign: "center",
+                          margin: "12pxo auto",
+                          // borderRadius: "42px",
+                          "&:hover": {
+                            background: item.color,
+                            color: "white"
+                          }
+                        }}
+                      >
+                        <span></span>
+                        {item.title}
+                      </Typography>
+                    </Link>
                   );
                 })}
             </Grid>
@@ -836,13 +874,13 @@ const DoctorHeader = () => {
     "Psychology.",
     "Therapist.",
     "Psychiatrist.",
-    "Academic Advisor.",
+    "Academic Advisor."
   ];
   const [currentDoctorIndex, setCurrentDoctorIndex] = useState(0);
 
   // Function to cycle through the doctors
   const cycleDoctors = () => {
-    setCurrentDoctorIndex((prevIndex) => (prevIndex + 1) % doctors.length);
+    setCurrentDoctorIndex(prevIndex => (prevIndex + 1) % doctors.length);
   };
 
   useEffect(() => {
