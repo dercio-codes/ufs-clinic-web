@@ -606,20 +606,21 @@ export const Navbar = () => {
         <Grid
           item
           xs={2}
-          sx={
-            {
-              // padding: "30px",
-              // backgroundImage: "url('/qwaqwa-logo.jpg')",
-              // backgroundSize: "contain",
-              // backgroundPosition: "left",
-              // backgroundRepeat: "no-repeat"
-            }
-          }
+          sx={{
+            // padding: "30px",
+            // backgroundImage: "url('/qwaqwa-logo.jpg')",
+            // backgroundSize: "contain",
+            // backgroundPosition: "left",
+            // backgroundRepeat: "no-repeat"
+            display: "flex",
+            alignItems: "center"
+          }}
         >
-          <Link href="/">
+          <Link href="/" style={{ width: "100%", height: "50px" }}>
             <Box
               sx={{
                 height: "50px",
+                width: "100%",
                 backgroundImage: "url('/qwaqwa-logo.jpg')",
                 backgroundSize: "contain",
                 backgroundPosition: "left",
