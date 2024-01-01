@@ -186,60 +186,64 @@ export const Main = () => {
               </Paper>
             </Box>
             <Box data-aos="fade-bottom" data-aos-duration="5000">
-              <Paper
-                className="hero-cards"
-                elevation={3}
-                sx={{
-                  "&:hover": {
-                    cursor: "pointer",
-                    background: "rgba(1,1,1,.2)"
-                  },
-                  margin: "32px 0",
-                  width: "100%",
-                  height: "100px",
-                  borderLeft: "10px solid #001842",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  padding: "0 21px"
-                }}
-              >
-                <TipsAndUpdatesIcon
-                  sx={{ fontSize: "35px", color: "#001842" }}
-                />
-                <Typography sx={{}}> Tips </Typography>
-                <ArrowForwardIcon
-                  className="hero-card-icon"
-                  sx={{ color: "#001842" }}
-                />
-              </Paper>
+              <Link href="tips">
+                <Paper
+                  className="hero-cards"
+                  elevation={3}
+                  sx={{
+                    "&:hover": {
+                      cursor: "pointer",
+                      background: "rgba(1,1,1,.2)"
+                    },
+                    margin: "32px 0",
+                    width: "100%",
+                    height: "100px",
+                    borderLeft: "10px solid #001842",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    padding: "0 21px"
+                  }}
+                >
+                  <TipsAndUpdatesIcon
+                    sx={{ fontSize: "35px", color: "#001842" }}
+                  />
+                  <Typography sx={{}}> Tips </Typography>
+                  <ArrowForwardIcon
+                    className="hero-card-icon"
+                    sx={{ color: "#001842" }}
+                  />
+                </Paper>
+              </Link>
             </Box>
             <Box data-aos="fade-bottom" data-aos-duration="5000">
-              <Paper
-                className="hero-cards"
-                elevation={3}
-                sx={{
-                  "&:hover": {
-                    cursor: "pointer",
-                    background: "rgba(1,1,1,.2)"
-                  },
-                  margin: "32px 0",
-                  width: "100%",
-                  height: "100px",
-                  borderLeft: "10px solid #001842",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  padding: "0 21px"
-                }}
-              >
-                <CallIcon sx={{ fontSize: "35px", color: "#001842" }} />
-                <Typography sx={{}}> Contact Us </Typography>
-                <ArrowForwardIcon
-                  className="hero-card-icon"
-                  sx={{ color: "#001842" }}
-                />
-              </Paper>
+              <Link href="contact">
+                <Paper
+                  className="hero-cards"
+                  elevation={3}
+                  sx={{
+                    "&:hover": {
+                      cursor: "pointer",
+                      background: "rgba(1,1,1,.2)"
+                    },
+                    margin: "32px 0",
+                    width: "100%",
+                    height: "100px",
+                    borderLeft: "10px solid #001842",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    padding: "0 21px"
+                  }}
+                >
+                  <CallIcon sx={{ fontSize: "35px", color: "#001842" }} />
+                  <Typography sx={{}}> Contact Us </Typography>
+                  <ArrowForwardIcon
+                    className="hero-card-icon"
+                    sx={{ color: "#001842" }}
+                  />
+                </Paper>
+              </Link>
             </Box>
           </Grid>
 
@@ -619,7 +623,11 @@ export const Navbar = () => {
             justifyContent: "space-evenly"
           }}
         >
-          <NavItem listItems={categoriesData} text={"Health Tips "} />
+          <NavItem
+            listItems={categoriesData}
+            page={"tips"}
+            text={"Health Tips "}
+          />
           <NavItem listItems={false} page={"campaigns"} text={"Campaigns"} />
           <NavItem listItems={false} page={"/#what-we-do"} text={"About"} />
           <NavItem listItems={false} page={"/contact"} text={"contact"} />
