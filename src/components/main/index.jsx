@@ -153,37 +153,39 @@ export const Main = () => {
             }}
           >
             <Box data-aos="fade-bottom" data-aos-duration="5000">
-              <Paper
-                className="hero-cards"
-                elevation={3}
-                sx={{
-                  "&:hover": {
-                    cursor: "pointer",
-                    background: "rgba(1,1,1,.2)"
-                  },
-                  margin: "32px 0",
-                  width: "100%",
-                  height: "100px",
-                  borderLeft: "10px solid #001842",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  padding: "0 21px"
-                }}
-              >
-                <SearchIcon
-                  className="hero-card-icon-search"
-                  sx={{ fontSize: "35px", color: "#001842" }}
-                />
-                <Typography className={"card-text"} sx={{}}>
-                  {" "}
-                  Find a Nurse{" "}
-                </Typography>
-                <ArrowForwardIcon
-                  className="hero-card-icon"
-                  sx={{ color: "#001842" }}
-                />
-              </Paper>
+              <Link href="contact">
+                <Paper
+                  className="hero-cards"
+                  elevation={3}
+                  sx={{
+                    "&:hover": {
+                      cursor: "pointer",
+                      background: "rgba(1,1,1,.2)"
+                    },
+                    margin: "32px 0",
+                    width: "100%",
+                    height: "100px",
+                    borderLeft: "10px solid #001842",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    padding: "0 21px"
+                  }}
+                >
+                  <SearchIcon
+                    className="hero-card-icon-search"
+                    sx={{ fontSize: "35px", color: "#001842" }}
+                  />
+                  <Typography className={"card-text"} sx={{}}>
+                    {" "}
+                    Find a Nurse{" "}
+                  </Typography>
+                  <ArrowForwardIcon
+                    className="hero-card-icon"
+                    sx={{ color: "#001842" }}
+                  />
+                </Paper>
+              </Link>
             </Box>
             <Box data-aos="fade-bottom" data-aos-duration="5000">
               <Link href="tips">
@@ -604,14 +606,28 @@ export const Navbar = () => {
         <Grid
           item
           xs={2}
-          sx={{
-            padding: "30px",
-            backgroundImage: "url('/qwaqwa-logo.jpg')",
-            backgroundSize: "contain",
-            backgroundPosition: "left",
-            backgroundRepeat: "no-repeat"
-          }}
-        ></Grid>
+          sx={
+            {
+              // padding: "30px",
+              // backgroundImage: "url('/qwaqwa-logo.jpg')",
+              // backgroundSize: "contain",
+              // backgroundPosition: "left",
+              // backgroundRepeat: "no-repeat"
+            }
+          }
+        >
+          <Link href="/">
+            <Box
+              sx={{
+                height: "50px",
+                backgroundImage: "url('/qwaqwa-logo.jpg')",
+                backgroundSize: "contain",
+                backgroundPosition: "left",
+                backgroundRepeat: "no-repeat"
+              }}
+            />
+          </Link>
+        </Grid>
         <Grid
           item
           xs={10}
