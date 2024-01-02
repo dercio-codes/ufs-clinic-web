@@ -12,6 +12,13 @@ import {
   Boxider
 } from "@mui/material";
 import { Navbar } from "./../../components/main";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Link from "@mui/material/Link";
+
+function handleClick(event) {
+  event.preventDefault();
+  console.info("You clicked a breadcrumb.");
+}
 
 const CategoryPage = () => {
   const router = useRouter();
@@ -57,6 +64,29 @@ const CategoryPage = () => {
         </Box>
       </Box>
       <Box sx={{ width: "90%", background: "", margin: "0 auto" }}>
+        <Box
+          sx={{
+            width: "90%",
+            background: "",
+            margin: "32px 0",
+            color: currentCategory.color
+          }}
+        >
+          <Breadcrumbs aria-label="breadcrumb">
+            <Link underline="hover" color="inherit" href="/">
+              Home
+            </Link>
+            <Link underline="hover" color="inherit" href="/tips">
+              Tips
+            </Link>
+            <Typography
+              color="text.primary"
+              sx={{ fontWeight: "600", color: currentCategory.color }}
+            >
+              {currentCategory.title}
+            </Typography>
+          </Breadcrumbs>
+        </Box>
         {HealthTips.map((item, index) => {
           return (
             <Grid

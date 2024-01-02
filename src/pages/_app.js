@@ -1,9 +1,28 @@
 import React from "react";
 import "@/styles/globals.css";
-import ChatBot from "react-simple-chatbot";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "./../components/footer";
+import Chatbot from "react-chatbot-kit";
+import "react-chatbot-kit/build/main.css";
+
+import config from "./configs/chatbotConfig";
+import MessageParser from "./chatbot/MessageParser";
+import ActionProvider from "./chatbot/ActionProvider";
+
+function App() {
+  return (
+    <div className="App">
+      <Chatbot
+        config={config}
+        messageParser={MessageParser}
+        actionProvider={ActionProvider}
+      />
+    </div>
+  );
+}
+
+export default App;
 
 export default function App({ Component, pageProps }) {
   const [loaded, setLoaded] = React.useState(false);
@@ -47,11 +66,8 @@ export default function App({ Component, pageProps }) {
       <div>
         <Component {...pageProps} />
         <Footer />
+        <div style={{ position: "fixed", right: "0", bottom: "32px" }}>HI</div>
       </div>
     )
   );
 }
-
-// <div style={{ position:'fixed' , right:'0' , bottom:'32px' }} >
-//    <ChatBot steps={steps} />
-// </div>
