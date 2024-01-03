@@ -12,7 +12,8 @@ import {
   Menu,
   Tooltip,
   Paper,
-  Button
+  Button,
+  IconButton
 } from "@mui/material";
 
 import config from "./../chatbot/chatbotConfig";
@@ -54,10 +55,32 @@ export default function App({ Component, pageProps }) {
               actionProvider={ActionProvider}
             />
           </div>
-          <Button
+
+          <IconButton
             onClick={handleToggleChat}
-            style={{ height: "65px", width: "65px", background: "red" }}
-          />
+            sx={{
+              height: "65px",
+              width: "65px",
+              border: "3px solid #357EC7",
+              background: "white",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              borderRadius: "50%"
+            }}
+          >
+            <Box
+              style={{
+                height: "45px",
+                width: "45px",
+                backgroundColor: "",
+                backgroundImage: "url('/chatbot.gif')",
+                backgroundSize: "contain",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat"
+              }}
+            />
+          </IconButton>
         </div>
       </div>
     )

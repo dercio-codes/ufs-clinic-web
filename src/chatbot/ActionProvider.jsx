@@ -4,7 +4,12 @@ import React from "react";
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   const handleHello = () => {
     const botMessage = createChatBotMessage(
-      "Hello I am Kovsie and I will be your online virtual assistant that help you navigate the UFS Online Virtual Clinic./nWHat can I help you with today?",
+      "Hello! I am Kovsie, your online virtual for the UFS Online Virtual Clinin. \n \n How can I assist you today? \n For tips, you can ask for help or provide more information about what you are looking for",
+      {
+        // withAvatar: false,
+        delay: 2500,
+        widget: "optionsWidget",
+      },
     );
 
     setState((prev) => ({
@@ -24,6 +29,25 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }));
   };
 
+  const handleInvalidPrompt = () => {
+    const botMessage = createChatBotMessage(
+      "Sorry, I couldn't understand your request. Please try again with a valid input. If you need assistance, you can ask for help or provide more information about what you are looking for",
+    );
+
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+
+  const handleClear = () => {
+    setState((prev) => ({
+      ...prev,
+      messages: [],
+    }));
+    handleHello();
+  };
+
   // Put the handleHello function in the actions object to pass to the MessageParser
   return (
     <div>
@@ -32,6 +56,8 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
           actions: {
             handleHello,
             handleTips,
+            handleInvalidPrompt,
+            handleClear,
           },
         });
       })}

@@ -80,7 +80,9 @@
   margin: 0;
   font-family: "Lato", sans-serif !important;
 }
-
+.react-chatbot-kit-chat-input{
+background:'azure'
+}
 html,
 body {
   max-width: 100vw;
