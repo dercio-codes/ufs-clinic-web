@@ -22,6 +22,11 @@ const chatbotConfig = {
   initialMessages: [
     createChatBotMessage(
       "Hello I am Kovsie and I will be your online virtual assistant that help you navigate the UFS Online Virtual Clinic.\n What can I help you with today?",
+      {
+        // withAvatar: false,
+        delay: 2500,
+        widget: "optionsWidget",
+      },
     ),
   ],
   botName: botName,
