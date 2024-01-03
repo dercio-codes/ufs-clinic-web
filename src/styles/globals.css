@@ -80,8 +80,8 @@
   margin: 0;
   font-family: "Lato", sans-serif !important;
 }
-.react-chatbot-kit-chat-input{
-background:'azure'
+.react-chatbot-kit-chat-input {
+  background: "azure" !important;
 }
 html,
 body {
