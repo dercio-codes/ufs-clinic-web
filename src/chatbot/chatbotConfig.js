@@ -129,6 +129,7 @@ const OptionsWidget = (props) => {
       {["Tips", "Campaigns", "About", "Contact"].map((title, index) => {
         return (
           <Link
+            key={index}
             href={`/${title.toLowerCase()}`}
             as={`/${title.toLowerCase()}`}
             style={{ width: "100%" }}
