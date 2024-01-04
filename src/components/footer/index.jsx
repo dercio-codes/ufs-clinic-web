@@ -154,7 +154,7 @@ export default function Footer() {
             sx={{
               display: "flex",
               minHeight: { xs: "50vh", lg: "70vh" },
-              background: "red",
+              background: "",
               justifyContent: "flex-end",
               alignItems: "flex-end"
             }}
