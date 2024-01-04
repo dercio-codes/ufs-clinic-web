@@ -131,19 +131,19 @@ export default function Footer() {
               {" "}
               Clinic Staff{" "}
             </Typography>
-            <Typography sx={{ fontSize: "21px", margin: "12px 0" }}>
+            <Typography sx={{ fontSize: "16px", margin: "12px 0" }}>
               {" "}
               Mathapelo Moloi (Chief Officer){" "}
             </Typography>
-            <Typography sx={{ fontSize: "21px", margin: "12px 0" }}>
+            <Typography sx={{ fontSize: "16px", margin: "12px 0" }}>
               {" "}
               Modise NL (Senior Officer){" "}
             </Typography>
-            <Typography sx={{ fontSize: "21px", margin: "12px 0" }}>
+            <Typography sx={{ fontSize: "16px", margin: "12px 0" }}>
               {" "}
               Mokhethi TF (Assisstant Offer){" "}
             </Typography>
-            <Typography sx={{ fontSize: "21px", margin: "12px 0" }}>
+            <Typography sx={{ fontSize: "16px", margin: "12px 0" }}>
               {" "}
               DR Mohlala (Assisstant Offer){" "}
             </Typography>

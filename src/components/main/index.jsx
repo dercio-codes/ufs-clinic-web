@@ -180,7 +180,7 @@ export const Main = () => {
               <Link href="contact">
                 <Paper
                   className="hero-cards"
-                  elevation={3}
+                  elevation={2}
                   sx={{
                     "&:hover": {
                       cursor: "pointer",
