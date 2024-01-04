@@ -41,7 +41,7 @@ export default function Footer() {
                   background: "",
                   margin: "32px 0",
                   backgroundImage: "url('/plain.png')",
-                  backgroundSize: "contain",
+                  backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                   scale: "1"
@@ -154,6 +154,7 @@ export default function Footer() {
             sx={{
               display: "flex",
               minHeight: { xs: "50vh", lg: "70vh" },
+              background: "red",
               justifyContent: "flex-end",
               alignItems: "flex-end"
             }}
@@ -217,16 +218,22 @@ export default function Footer() {
           xs={12}
           md={3}
           sx={{
-            height: "180px",
-            background: "",
-            margin: "32px 0",
-            backgroundImage: "url('/footer-atomus-logo.png')",
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "right",
-            scale: "0.85"
+            padding: "0 21px"
           }}
-        ></Grid>
+        >
+          <Box
+            sx={{
+              height: { xs: "120px", lg: "180px" },
+              background: "",
+              margin: "32px 0",
+              backgroundImage: "url('/atomus_logo_transparent.png')",
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              scale: "1.2"
+            }}
+          />
+        </Grid>
         <Grid
           item
           xs={12}
@@ -235,8 +242,8 @@ export default function Footer() {
             height: { xs: "120px", lg: "180px" },
             background: "",
             margin: "32px 0",
-            backgroundImage: "url('/qwaqwa-logo.jpg')",
-            backgroundSize: "cover",
+            backgroundImage: "url('/qwaqwa-logo-transparent.png')",
+            backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             scale: "0.7"

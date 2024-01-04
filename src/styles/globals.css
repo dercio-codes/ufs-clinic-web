@@ -113,18 +113,20 @@ a {
     max-width: 300px;
   }
 }
-
+.swiper-wrapper {
+  margin: 0px 0px 0px 75px;
+}
 .swiper {
-  width: 100%;
-  min-height: 60vh;
+  /* width: 100%; */
+  min-width: 350px;
+  height: 100%;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: transparent;
-  width: fit-content;
-  max-width: 450px;
+
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
@@ -137,6 +139,47 @@ a {
   height: 100%;
   object-fit: cover;
 }
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+  margin: 32px 0;
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: #007aff;
+}
+
+/* .swiper {
+  width: 100%;
+  min-height: 60vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  width: fit-content;
+  max-width: 450px;
+  Center slide text vertically
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
 
 .tracking-in-expand {
   -webkit-animation: tracking-in-expand 7s cubic-bezier(0.215, 0.61, 0.355, 1)

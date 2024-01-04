@@ -141,6 +141,30 @@ export const Main = () => {
                 Includes Session Doctors and Primary Health Care by Professional
                 nurses.{" "}
               </Typography>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  padding: "0 42px"
+                }}
+              >
+                <Button
+                  sx={{
+                    scale: "0.9",
+                    color: "white",
+                    padding: "16px 32px",
+                    margin: "21px 0",
+                    borderRadius: "32px",
+                    background: "#001842",
+                    "&:hover": {
+                      color: "#001842"
+                    }
+                  }}
+                >
+                  {" "}
+                  BOOK APPOINTMENT{" "}
+                </Button>
+              </Box>
             </Box>
           </Grid>
           <Grid
@@ -374,44 +398,6 @@ export const Main = () => {
           </Typography>
           <Carousel />
         </Box>
-
-        <Box
-          data-aos="fade-bottom"
-          data-aos-duration="2000"
-          sx={{ margin: "50px 0" }}
-        >
-          <Typography
-            sx={{
-              fontWeight: "600",
-              color: "rgba(1, 1, 1, 0.5)",
-              fontSize: "32px",
-              textAlign: "",
-              margin: "40px 0"
-            }}
-          >
-            {"Mens Health"}
-          </Typography>
-          <Carousel />
-        </Box>
-
-        <Box
-          data-aos="fade-bottom"
-          data-aos-duration="2000"
-          sx={{ margin: "50px 0" }}
-        >
-          <Typography
-            sx={{
-              fontWeight: "600",
-              color: "rgba(1, 1, 1, 0.5)",
-              fontSize: "32px",
-              textAlign: "",
-              margin: "40px 0"
-            }}
-          >
-            {"Protective Sex Health"}
-          </Typography>
-          <Carousel />
-        </Box>
       </Box>
 
       <Box
@@ -519,13 +505,30 @@ export const Main = () => {
                 "We are committed to maintaining strict confidentiality, and our care is available to all registered UFS staff and students, regardless of their financial situation."
               }
             </Typography>
-            <br />
+            <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+              <Button
+                sx={{
+                  scale: "0.9",
+                  color: "white",
+                  padding: "16px 32px",
+                  margin: "21px 0",
+                  borderRadius: "32px",
+                  background: "#001842",
+                  "&:hover": {
+                    color: "#001842"
+                  }
+                }}
+              >
+                {" "}
+                BOOK APPOINTMENT{" "}
+              </Button>
+            </Box>
           </Grid>
         </Grid>
         <Box sx={{ margin: "100px 0" }}>
           <Box data-aos="zoom-in" data-aos-duration="800">
             <Typography
-              sx={{ fontSize: "34px", fontWeight: "600", margin: "100px 0" }}
+              sx={{ fontSize: "34px", fontWeight: "600", margin: "30px 0" }}
             >
               {" "}
               {"Exploring The Frontiers of Health: Articles and Blogs"}{" "}
@@ -608,7 +611,7 @@ export const Navbar = () => {
           xs={2}
           sx={{
             // padding: "30px",
-            // backgroundImage: "url('/qwaqwa-logo.jpg')",
+            // backgroundImage: "url('/qwaqwa-logo-transparent.png')",
             // backgroundSize: "contain",
             // backgroundPosition: "left",
             // backgroundRepeat: "no-repeat"
@@ -621,7 +624,7 @@ export const Navbar = () => {
               sx={{
                 height: "50px",
                 width: "100%",
-                backgroundImage: "url('/qwaqwa-logo.jpg')",
+                backgroundImage: "url('/qwaqwa-logo-transparent.png')",
                 backgroundSize: "contain",
                 backgroundPosition: "left",
                 backgroundRepeat: "no-repeat"
@@ -872,8 +875,10 @@ function NavItem({ text, listItems, page }) {
                           width: "100%",
                           textAlign: "center",
                           margin: "12pxo auto",
+                          transition: "400ms",
                           // borderRadius: "42px",
                           "&:hover": {
+                            transition: "400ms",
                             background: item.color,
                             color: "white"
                           }
