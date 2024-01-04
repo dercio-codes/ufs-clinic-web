@@ -164,7 +164,7 @@ export default function Footer() {
                 height: "250px",
                 width: "100%",
                 backgroundImage: `url("/contact-image.png")`,
-                backgroundSize: "cover",
+                backgroundSize: "contain",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat"
               }}
