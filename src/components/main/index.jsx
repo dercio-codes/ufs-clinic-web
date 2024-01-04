@@ -263,7 +263,10 @@ export const Main = () => {
                   }}
                 >
                   <CallIcon sx={{ fontSize: "35px", color: "#001842" }} />
-                  <Typography sx={{}}> Contact Us </Typography>
+                  <Typography sx={{ fontWeight: "300", color: "inherit" }}>
+                    {" "}
+                    Contact Us{" "}
+                  </Typography>
                   <ArrowForwardIcon
                     className="hero-card-icon"
                     sx={{ color: "#001842" }}
