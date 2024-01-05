@@ -92,7 +92,7 @@ export default function Footer() {
           <Grid
             item
             xs={12}
-            md={4}
+            md={6.5}
             sx={{
               padding: "0 32px"
             }}
@@ -150,7 +150,8 @@ export default function Footer() {
           </Grid>
           <Grid
             item
-            xs={4}
+            xs={12}
+            lg={3}
             sx={{
               display: "flex",
               minHeight: { xs: "50vh", lg: "70vh" },
@@ -163,7 +164,7 @@ export default function Footer() {
               sx={{
                 height: "250px",
                 width: "100%",
-                backgroundImage: `url("/contact-image.png")`,
+                backgroundImage: `url("/contact-image-transparent.png")`,
                 backgroundSize: "contain",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat"

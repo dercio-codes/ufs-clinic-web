@@ -603,58 +603,59 @@ const MenuDrop = () => {
 
 export const Navbar = () => {
   return (
-    <Box sx={{ width: "90%", margin: "0 auto" }}>
+    <Box sx={{ width: "100%", margin: "0 auto" }}>
       <Box sx={{ height: "5vh", background: BLUE }} />
-
-      <Grid container>
-        <Grid
-          item
-          xs={2}
-          sx={{
-            // padding: "30px",
-            // backgroundImage: "url('/qwaqwa-logo-transparent.png')",
-            // backgroundSize: "contain",
-            // backgroundPosition: "left",
-            // backgroundRepeat: "no-repeat"
-            display: "flex",
-            alignItems: "center"
-          }}
-        >
-          <Link href="/" style={{ width: "100%", height: "50px" }}>
-            <Box
-              sx={{
-                height: "50px",
-                width: "100%",
-                backgroundImage: "url('/qwaqwa-logo-transparent.png')",
-                backgroundSize: "contain",
-                backgroundPosition: "left",
-                backgroundRepeat: "no-repeat"
-              }}
+      <Box sx={{ width: "90%", margin: "0 auto" }}>
+        <Grid container>
+          <Grid
+            item
+            xs={2}
+            sx={{
+              // padding: "30px",
+              // backgroundImage: "url('/qwaqwa-logo-transparent.png')",
+              // backgroundSize: "contain",
+              // backgroundPosition: "left",
+              // backgroundRepeat: "no-repeat"
+              display: "flex",
+              alignItems: "center"
+            }}
+          >
+            <Link href="/" style={{ width: "100%", height: "50px" }}>
+              <Box
+                sx={{
+                  height: "50px",
+                  width: "100%",
+                  backgroundImage: "url('/qwaqwa-logo-transparent.png')",
+                  backgroundSize: "contain",
+                  backgroundPosition: "left",
+                  backgroundRepeat: "no-repeat"
+                }}
+              />
+            </Link>
+          </Grid>
+          <Grid
+            item
+            xs={10}
+            sx={{
+              padding: "30px",
+              background: "",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-evenly"
+            }}
+          >
+            <NavItem
+              listItems={categoriesData}
+              page={"tips"}
+              text={"Health Tips "}
             />
-          </Link>
+            <NavItem listItems={false} page={"campaigns"} text={"Campaigns"} />
+            <NavItem listItems={false} page={"#what-we-do"} text={"About"} />
+            <NavItem listItems={false} page={"articles"} text={"Blog"} />
+            <NavItem listItems={false} page={"contact"} text={"contact"} />
+          </Grid>
         </Grid>
-        <Grid
-          item
-          xs={10}
-          sx={{
-            padding: "30px",
-            background: "",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-evenly"
-          }}
-        >
-          <NavItem
-            listItems={categoriesData}
-            page={"tips"}
-            text={"Health Tips "}
-          />
-          <NavItem listItems={false} page={"campaigns"} text={"Campaigns"} />
-          <NavItem listItems={false} page={"#what-we-do"} text={"About"} />
-          <NavItem listItems={false} page={"articles"} text={"Blog"} />
-          <NavItem listItems={false} page={"contact"} text={"contact"} />
-        </Grid>
-      </Grid>
+      </Box>
     </Box>
   );
 };

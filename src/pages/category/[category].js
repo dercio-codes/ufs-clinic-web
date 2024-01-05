@@ -36,7 +36,7 @@ const CategoryPage = () => {
 
   return (
     <Box sx={{ width: "100%", margin: "0 auto" }}>
-      <Box sx={{ width: "90%", background: "", margin: "0 auto" }}>
+      <Box sx={{ width: "100%", background: "", margin: "0 auto" }}>
         <Navbar />
       </Box>
       <Box data-aos="fade-bottom" data-aos-duration={"5000"}>

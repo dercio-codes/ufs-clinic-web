@@ -8,7 +8,7 @@ import {
   Tooltip,
   Paper,
   Divider,
-  TextField,
+  TextField
 } from "@mui/material";
 import { Navbar } from "./../components/main";
 
@@ -23,7 +23,7 @@ export default function Contact() {
   };
   return (
     <Box sx={{ width: "100%", margin: "0 auto" }}>
-      <Box sx={{ width: "90%", background: "", margin: "0 auto" }}>
+      <Box sx={{ width: "100%", background: "", margin: "0 auto" }}>
         <Navbar />
       </Box>
       <Box
@@ -32,7 +32,7 @@ export default function Contact() {
           padding: "30px",
           backgroundImage: "url('/qwaqwa-banner.jpg')",
           backgroundSize: { xs: "contain", lg: "cover" },
-          backgroundPosition: "left",
+          backgroundPosition: "left"
         }}
       />
       <Box
@@ -40,7 +40,7 @@ export default function Contact() {
           width: "90%",
           background: "",
           padding: "0 32px",
-          margin: "0 auto",
+          margin: "0 auto"
         }}
       >
         <TitleHeader text={"Contact Us"} />
@@ -50,7 +50,7 @@ export default function Contact() {
             fontSize: "21px",
             color: "#111",
             fontWeight: "500",
-            textAlign: "center",
+            textAlign: "center"
           }}
         >
           {"Fill in the form below."}
@@ -66,18 +66,33 @@ export default function Contact() {
               display: "flex",
               flexDirection: "column",
               alignItems: "",
-              padding: "21px 0 0 32px",
+              padding: "21px 0 0 32px"
             }}
           >
-          <Typography component={"label"} sx={{ textAlign:'left' }}   > Name : </Typography>
+            <Typography component={"label"} sx={{ textAlign: "left" }}>
+              {" "}
+              Name :{" "}
+            </Typography>
             <TextField sx={{ ...TextStyles }} fullWidth={true} />
-          <Typography component={"label"} sx={{ textAlign:'left' }}   > Surname : </Typography>
+            <Typography component={"label"} sx={{ textAlign: "left" }}>
+              {" "}
+              Surname :{" "}
+            </Typography>
             <TextField sx={{ ...TextStyles }} fullWidth={true} />
-          <Typography component={"label"} sx={{ textAlign:'left' }}   > Phone Number : </Typography>
+            <Typography component={"label"} sx={{ textAlign: "left" }}>
+              {" "}
+              Phone Number :{" "}
+            </Typography>
             <TextField sx={{ ...TextStyles }} fullWidth={true} />
-          <Typography component={"label"} sx={{ textAlign:'left' }}   > Duration : </Typography>
+            <Typography component={"label"} sx={{ textAlign: "left" }}>
+              {" "}
+              Duration :{" "}
+            </Typography>
             <TextField sx={{ ...TextStyles }} fullWidth={true} />
-          <Typography component={"label"} sx={{ textAlign:'left' }}   > Email : </Typography>
+            <Typography component={"label"} sx={{ textAlign: "left" }}>
+              {" "}
+              Email :{" "}
+            </Typography>
             <TextField sx={{ ...TextStyles }} fullWidth={true} />
           </Grid>
 
@@ -90,43 +105,67 @@ export default function Contact() {
               display: "flex",
               flexDirection: "column",
               alignItems: "",
-              padding: "21px 0 0 32px",
+              padding: "21px 0 0 32px"
             }}
           >
-          <Typography component={"label"} sx={{ textAlign:'left' }}   > Symptoms : </Typography>
+            <Typography component={"label"} sx={{ textAlign: "left" }}>
+              {" "}
+              Symptoms :{" "}
+            </Typography>
             <TextField sx={{ ...TextStyles }} fullWidth={true} />
-          <Typography component={"label"} sx={{ textAlign:'left' }}   > Type : </Typography>
+            <Typography component={"label"} sx={{ textAlign: "left" }}>
+              {" "}
+              Type :{" "}
+            </Typography>
             <TextField sx={{ ...TextStyles }} fullWidth={true} />
-                      <Typography component={"label"} sx={{ textAlign:'left' }}   > Time : </Typography>
+            <Typography component={"label"} sx={{ textAlign: "left" }}>
+              {" "}
+              Time :{" "}
+            </Typography>
             <TextField sx={{ ...TextStyles }} fullWidth={true} />
 
-          <Typography component={"label"} sx={{ textAlign:'left' }}   > Query : </Typography>
-            <TextField multiline={true} rows={6.3} sx={{ ...TextStyles }} fullWidth={true} />
-          
+            <Typography component={"label"} sx={{ textAlign: "left" }}>
+              {" "}
+              Query :{" "}
+            </Typography>
+            <TextField
+              multiline={true}
+              rows={6.3}
+              sx={{ ...TextStyles }}
+              fullWidth={true}
+            />
           </Grid>
-          <Grid item xs={12} sx={{ display:'flex' , justifyContent:'flex-end' , alignItems:'center' , }} >
-                  <Button
-          sx={{
-            background: "#111",
-            color: "white",
-            fontWeight: "600",
-            padding: "21px 48px",
-            transition: "800ms",
-            margin:'21px 0',
-            border: "1px solid transparent",
-            "&:hover": {
-              color: "white",
-              border: "1px solid #111",
-              backgroundImage: "url('/hover.png')",
-              backgroundSize: { xs: "cover", lg: "cover" },
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            },
-          }}
-        >
-          {" "}
-          Get Involved{" "}
-        </Button>
+          <Grid
+            item
+            xs={12}
+            sx={{
+              display: "flex",
+              justifyContent: "flex-end",
+              alignItems: "center"
+            }}
+          >
+            <Button
+              sx={{
+                background: "#111",
+                color: "white",
+                fontWeight: "600",
+                padding: "21px 48px",
+                transition: "800ms",
+                margin: "21px 0",
+                border: "1px solid transparent",
+                "&:hover": {
+                  color: "white",
+                  border: "1px solid #111",
+                  backgroundImage: "url('/hover.png')",
+                  backgroundSize: { xs: "cover", lg: "cover" },
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat"
+                }
+              }}
+            >
+              {" "}
+              Get Involved{" "}
+            </Button>
           </Grid>
 
           <Grid
@@ -134,14 +173,14 @@ export default function Contact() {
             xs={12}
             md={2.5}
             sx={{
-              minHeight: "70vh",
+              minHeight: "70vh"
             }}
           >
             <Box
               sx={{
                 height: "",
                 width: "100%",
-                margin: "0 auto",
+                margin: "0 auto"
               }}
             >
               <Box
@@ -153,7 +192,7 @@ export default function Contact() {
                   backgroundSize: "contain",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
-                  scale: "0.7",
+                  scale: "0.7"
                 }}
               ></Box>
               <Box
@@ -162,7 +201,7 @@ export default function Contact() {
                   backgroundImage: 'url("/sky.jpg")',
                   backgroundPosition: "right",
                   backgroundSize: "cover",
-                  backgroundAttachment: "fixed",
+                  backgroundAttachment: "fixed"
                 }}
               >
                 <Box
@@ -170,7 +209,7 @@ export default function Contact() {
                     background: "rgba(1,1,1,.5)",
                     width: "100%",
                     height: "100%",
-                    opacity: "0.5",
+                    opacity: "0.5"
                   }}
                 />
               </Box>
@@ -180,7 +219,7 @@ export default function Contact() {
                   margin: "0 auto",
                   background: RED,
                   padding: "32px 21px",
-                  borderRadius: "0 0 21px 21px",
+                  borderRadius: "0 0 21px 21px"
                 }}
               >
                 {" "}
@@ -188,7 +227,7 @@ export default function Contact() {
                   sx={{
                     fontSize: "12px",
                     color: "white",
-                    fontWeight: "600",
+                    fontWeight: "600"
                   }}
                 >
                   {" "}
@@ -203,13 +242,13 @@ export default function Contact() {
                   sx={{
                     display: "flex",
                     justifyContent: "center",
-                    alignItems: "center",
+                    alignItems: "center"
                   }}
                 >
                   <Typography
                     sx={{
                       fontStyle: "italic",
-                      fontSize: "10px",
+                      fontSize: "10px"
                     }}
                   >
                     {" "}
@@ -228,7 +267,7 @@ export default function Contact() {
                     backgroundSize: "contain",
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",
-                    scale: "0.7",
+                    scale: "0.7"
                   }}
                 ></Grid>
               </Grid>
@@ -240,14 +279,14 @@ export default function Contact() {
             xs={12}
             md={5.5}
             sx={{
-              padding: "0 32px",
+              padding: "0 32px"
             }}
           >
             <Typography
               sx={{
                 fontSize: "50px",
                 color: GREEN,
-                fontWeight: "500",
+                fontWeight: "500"
               }}
             >
               {" "}
@@ -271,7 +310,7 @@ export default function Contact() {
                 fontSize: "50px",
                 color: GREEN,
                 fontWeight: "500",
-                margin: "48px 0 32px 0",
+                margin: "48px 0 32px 0"
               }}
             >
               {" "}
@@ -301,7 +340,7 @@ export default function Contact() {
               display: "flex",
               minHeight: { lg: "70vh" },
               justifyContent: "flex-end",
-              alignItems: "flex-end",
+              alignItems: "flex-end"
             }}
           >
             <Box
@@ -311,7 +350,7 @@ export default function Contact() {
                 backgroundImage: `url("/contact-image.png")`,
                 backgroundSize: "contain",
                 backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
+                backgroundRepeat: "no-repeat"
               }}
             />
           </Grid>
@@ -329,7 +368,7 @@ const TitleHeader = ({ text }) => {
         fontSize: "34px",
         fontWeight: "600",
         margin: "32px 0",
-        color: GREEN,
+        color: GREEN
       }}
     >
       {" "}
@@ -339,5 +378,5 @@ const TitleHeader = ({ text }) => {
 };
 
 const TextStyles = {
-  margin: "21px 0",
+  margin: "21px 0"
 };
