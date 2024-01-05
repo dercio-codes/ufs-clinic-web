@@ -8,6 +8,7 @@ import {
   Paper,
   Button
 } from "@mui/material";
+import Link from "next/link";
 
 const GREEN = "#449842";
 const BLUE = "#001842";
@@ -193,6 +194,7 @@ export default function WhatWeDo() {
                     fontWeight: "600",
                     padding: "12px 21px",
                     margin: "21px 0 21px 21px",
+                    transition: "800ms",
                     minWidth: "20px",
                     "&:hover": {
                       background: "#111",
@@ -200,7 +202,7 @@ export default function WhatWeDo() {
                     }
                   }}
                 >
-                  {item}
+                  <Link>{item}</Link>
                 </Typography>
               );
             } else {
@@ -214,6 +216,7 @@ export default function WhatWeDo() {
                     fontSize: "21px",
                     textAlign: "center",
                     padding: "12px 21px",
+                    transition: "800ms",
                     margin: "21px 0 21px 21px",
                     minWidth: "20px",
                     "&:hover": {
@@ -246,6 +249,7 @@ export default function WhatWeDo() {
                     fontSize: "21px",
                     textAlign: "left",
                     color: "#111",
+                    transition: "800ms",
                     fontWeight: "600",
                     padding: "21px",
                     margin: "21px 0",
@@ -255,7 +259,11 @@ export default function WhatWeDo() {
                     }
                   }}
                 >
-                  {item}
+                  <Box aos="fade-up" data-aos-duration="1000">
+                    <Link to={`/${item.toLowerCase().replaceAll(/ /g, "_")}`}>
+                      {item}
+                    </Link>
+                  </Box>
                 </Grid>
               );
             }
