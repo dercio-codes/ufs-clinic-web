@@ -51,33 +51,39 @@ const Articles = () => {
             </Typography>
           </Link>
         </Breadcrumbs>
-        <Typography
-          sx={{
-            fontSize: "42px",
-            width: "100%",
-            fontWeight: "600",
-            textAlign: "left",
-            margin: "32px auto"
-          }}
-        >
-          Additional Blog Posts
-        </Typography>
+        <Box data-aos="fade-down" data-aos-duration="1000">
+          <Typography
+            sx={{
+              fontSize: "42px",
+              width: "100%",
+              fontWeight: "600",
+              textAlign: "left",
+              margin: "32px auto"
+            }}
+          >
+            Additional Blog Posts
+          </Typography>
+        </Box>
         <Grid container>
           {blogPosts.map((post, index) => {
             return (
               <Grid key={index} item xs={6} lg={4} sx={{ padding: "12px" }}>
-                <Link
-                  href={`/blog/${post.title
-                    .replaceAll(" ", "-")
-                    .toLowerCase()}`}
-                  as={`/blog/${post.title.replaceAll(" ", "-").toLowerCase()}`}
-                >
-                  <Card
-                    title={post.title}
-                    description={post.description}
-                    image={post.image}
-                  />
-                </Link>
+                <Box data-aos="fade-right" data-aos-duration={`${index}000`}>
+                  <Link
+                    href={`/blog/${post.title
+                      .replaceAll(" ", "-")
+                      .toLowerCase()}`}
+                    as={`/blog/${post.title
+                      .replaceAll(" ", "-")
+                      .toLowerCase()}`}
+                  >
+                    <Card
+                      title={post.title}
+                      description={post.description}
+                      image={post.image}
+                    />
+                  </Link>
+                </Box>
               </Grid>
             );
           })}

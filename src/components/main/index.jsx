@@ -65,7 +65,6 @@ export const Main = () => {
           top: "calc(320%)"
         }}
       />
-      <Box sx={{ height: "5vh", background: BLUE }} />
       <Navbar />
       <Box
         sx={{
@@ -605,6 +604,8 @@ const MenuDrop = () => {
 export const Navbar = () => {
   return (
     <Box sx={{ width: "90%", margin: "0 auto" }}>
+      <Box sx={{ height: "5vh", background: BLUE }} />
+
       <Grid container>
         <Grid
           item
@@ -650,6 +651,7 @@ export const Navbar = () => {
           />
           <NavItem listItems={false} page={"campaigns"} text={"Campaigns"} />
           <NavItem listItems={false} page={"#what-we-do"} text={"About"} />
+          <NavItem listItems={false} page={"articles"} text={"Blog"} />
           <NavItem listItems={false} page={"contact"} text={"contact"} />
         </Grid>
       </Grid>
