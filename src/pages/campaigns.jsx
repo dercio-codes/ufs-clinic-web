@@ -102,7 +102,7 @@ export default function Carousel() {
             xs={12}
             lg={2.5}
             sx={{
-              margin:{ xs:'12px auto', lg: "32px auto"},
+              margin: { xs: "12px auto", lg: "32px auto" },
               background: "#D7D7D7",
               zIndex: "3"
             }}
@@ -142,7 +142,7 @@ export default function Carousel() {
                 fontWeight: "600",
                 textAlign: "center",
                 color: "white",
-                background: GREEN,
+                background: GREEN
                 // display: { xs: "none", lg: "block" }
               }}
             >
@@ -159,7 +159,7 @@ export default function Carousel() {
                 return (
                   <Box key={index}>
                     <Typography
-                      key={index}
+                      key={item.category}
                       sx={{
                         fontSize: "18px",
                         width: "100%",
@@ -177,7 +177,7 @@ export default function Carousel() {
                         return (
                           <Box key={indexIndex}>
                             <Typography
-                              key={indexIndex}
+                              key={line.name}
                               sx={{
                                 fontSize: "18px",
                                 width: "100%",
@@ -192,7 +192,7 @@ export default function Carousel() {
                             </Typography>
                             {line.phone_number && (
                               <Typography
-                                key={indexIndex}
+                                key={line.phone_number}
                                 sx={{
                                   fontSize: "18px",
                                   width: "100%",
@@ -208,7 +208,7 @@ export default function Carousel() {
                             )}
                             {line.sms_number && (
                               <Typography
-                                key={indexIndex}
+                                key={line.sms_number}
                                 sx={{
                                   fontSize: "16px",
                                   width: "100%",
