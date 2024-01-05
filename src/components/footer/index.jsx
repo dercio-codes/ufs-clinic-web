@@ -40,8 +40,8 @@ export default function Footer() {
                   height: { xs: "45px", lg: "120px" },
                   background: "",
                   margin: "32px 0",
-                  backgroundImage: "url('/plain.png')",
-                  backgroundSize: "cover",
+                  backgroundImage: "url('/qwaqwa-logo-transparent.png')",
+                  backgroundSize: "contain",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                   scale: "1"

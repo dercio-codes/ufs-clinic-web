@@ -18,6 +18,7 @@ import {
 
 import { useTheme } from "@mui/system";
 import { useMediaQuery } from "@mui/material";
+import Link from "next/link";
 
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
@@ -111,44 +112,39 @@ function ReponsiveSwiper() {
       <Swiper
         pagination={true}
         slidesPerView={matches ? 1 : 2}
+        centeredSlides={matches}
         navigation={true}
         modules={[Pagination, Navigation]}
         className="aboutSwiper"
       >
-        <SwiperSlide>
-          <Card image={"/flu.jpg"} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card image={"/students-sitting.jpg"} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card image={"/about-us.jpg"} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card image={"/students-sitting.jpg"} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card image={"/flu.jpg"} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card image={"/students-sitting.jpg"} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card image={"/about-us.jpg"} />
-        </SwiperSlide>
+        {blogPosts.map((post, index) => (
+          <SwiperSlide key={index}>
+            <Link
+              style={{ width: "fit-content" }}
+              href={`/blog/${post.title.replaceAll(" ", "-").toLowerCase()}`}
+              as={`/blog/${post.title.replaceAll(" ", "-").toLowerCase()}`}
+            >
+              <Card
+                title={post.title}
+                description={post.description}
+                image={post.image}
+              />
+            </Link>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );
 }
 
-const Card = ({ image }) => {
+export const Card = ({ image, title, description }) => {
   return (
     <Paper
       elevation={5}
       sx={{
         border: "1px solid rgba(1,1,1,.1)",
         borderRadius: "21px",
-        width: "350px",
+        width: { xs: "320px", lg: "350px" },
         height: "400px",
         margin: { xs: "32px auto" },
         borderRadius: "21px 21px 0 0",
@@ -201,15 +197,26 @@ const Card = ({ image }) => {
               textAlign: "left",
             }}
           >
-            How To Deal With GBV?{" "}
+            {title}
           </Typography>
-          <ul
-            style={{ textAlign: "left", padding: "0 21px", lineHeight: "30px" }}
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: "16px",
+              margin: "12px 0",
+              fontWeight: "300",
+              textAlign: "left",
+              height: "50px",
+              width: "100%",
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+              textWrap: "wrap",
+              textOverflow: "ellipsis",
+            }}
           >
-            <li>Champainging Gender Equality</li>
-            <li>Womens Rights Advocacy</li>
-            <li>Education and Womens Empowerment</li>
-          </ul>
+            {description}
+          </Typography>
+
           <Box sx={{ display: "none", justifyContent: "flex-end" }}>
             <Button
               sx={{
@@ -233,3 +240,24 @@ const Card = ({ image }) => {
     </Paper>
   );
 };
+
+const blogPosts = [
+  {
+    title: "10 Essential Study Tips for University Students",
+    description:
+      "Discover the top study tips to help you succeed in university. From effective time management to active learning techniques, these strategies will boost your productivity and academic performance.",
+    image: "/flu.jpg",
+  },
+  {
+    title: "Navigating Life as a Freshman: A Guide for University Students",
+    description:
+      "Transitioning to university can be overwhelming. This comprehensive guide offers advice on making friends, managing your workload, and getting involved in campus activities. Start your university journey on the right foot!",
+    image: "/students-sitting.jpg",
+  },
+  {
+    title: "10 Fun and Affordable Weekend Activities for University Students",
+    description:
+      "Looking for ways to unwind and make the most of your weekends while on a tight budget? Check out these affordable and enjoyable activities that will help you relax, explore your interests, and connect with friends.",
+    image: "/about-us.jpg",
+  },
+];

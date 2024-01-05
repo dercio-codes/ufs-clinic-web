@@ -108,9 +108,14 @@ a {
   }
 }
 
-@media screen (max-width: 900px) {
-  .swiper-slide {
-    max-width: 300px;
+@media screen and (max-width: 900px) {
+  .swiper {
+    /* width: 100%; */
+    min-width: 350px;
+    min-height: 70vh;
+  }
+  .swiper-wrapper {
+    margin: 0px auto !important;
   }
 }
 .swiper-wrapper {

@@ -88,7 +88,8 @@ export const Main = () => {
               sx={{
                 display: "flex",
                 justifyContent: "space-between",
-                flexWrap: "wrap"
+                flexWrap: "wrap",
+                padding: "0 42px 0 0"
               }}
             >
               <Box data-aos="fade-right" data-aos-duration="1000">
@@ -108,10 +109,6 @@ export const Main = () => {
 
               <Box data-aos="fade-right" data-aos-duration="4000">
                 <CardItem image={"/tb.jpg"} text={"Tubercolosis"} />
-              </Box>
-
-              <Box data-aos="fade-right" data-aos-duration="5000">
-                <CardItem text={"See All..."} />
               </Box>
             </Box>
             <Box data-aos="fade-bottom" data-aos-duration="5000">
@@ -173,7 +170,7 @@ export const Main = () => {
             lg={3}
             sx={{
               alignItems: "center",
-              padding: "115px 0"
+              padding: "115px 0 0 0"
             }}
           >
             <Box data-aos="fade-bottom" data-aos-duration="5000">
@@ -186,9 +183,9 @@ export const Main = () => {
                       cursor: "pointer",
                       background: "rgba(1,1,1,.2)"
                     },
-                    margin: "32px 0",
+                    margin: "24px 0",
                     width: "100%",
-                    height: "100px",
+                    height: "120px",
                     borderLeft: "10px solid #001842",
                     display: "flex",
                     alignItems: "center",
@@ -221,9 +218,9 @@ export const Main = () => {
                       cursor: "pointer",
                       background: "rgba(1,1,1,.2)"
                     },
-                    margin: "32px 0",
+                    margin: "24px 0",
                     width: "100%",
-                    height: "100px",
+                    height: "120px",
                     borderLeft: "10px solid #001842",
                     display: "flex",
                     alignItems: "center",
@@ -252,9 +249,9 @@ export const Main = () => {
                       cursor: "pointer",
                       background: "rgba(1,1,1,.2)"
                     },
-                    margin: "32px 0",
+                    margin: "24px 0",
                     width: "100%",
-                    height: "100px",
+                    height: "120px",
                     borderLeft: "10px solid #001842",
                     display: "flex",
                     alignItems: "center",
@@ -423,7 +420,7 @@ export const Main = () => {
             xs={12}
             lg={4}
             sx={{
-              height: "85vh",
+              height: { xs: "85vh", lg: "105vh" },
               backgroundImage: `url('/about-us.jpg')`,
               backgroundSize: "cover",
               margin: "0 0 0 0",
@@ -528,7 +525,7 @@ export const Main = () => {
             </Box>
           </Grid>
         </Grid>
-        <Box sx={{ margin: "100px 0" }}>
+        <Box sx={{ margin: "50px 0" }}>
           <Box data-aos="zoom-in" data-aos-duration="800">
             <Typography
               sx={{ fontSize: "34px", fontWeight: "600", margin: "30px 0" }}
