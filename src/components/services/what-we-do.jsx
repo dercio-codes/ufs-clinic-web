@@ -239,6 +239,7 @@ export default function WhatWeDo() {
               selected.split("")[0].toUpperCase() ===
                 item.split("")[0].toUpperCase()
             ) {
+              console.log(item.toLowerCase().replaceAll(/ /g, "_"));
               return (
                 <Grid
                   item
@@ -260,7 +261,11 @@ export default function WhatWeDo() {
                   }}
                 >
                   <Box aos="fade-up" data-aos-duration="1000">
-                    <Link to={`/${item.toLowerCase().replaceAll(/ /g, "_")}`}>
+                    <Link
+                      to={`/https://en.wikipedia.org/wiki/${item
+                        .toLowerCase()
+                        .replaceAll(/ /g, "_")}`}
+                    >
                       {item}
                     </Link>
                   </Box>
