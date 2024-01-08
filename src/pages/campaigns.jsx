@@ -10,14 +10,17 @@ import {
   Divider
 } from "@mui/material";
 import { Navbar } from "./../components/main";
+import Link from "next/link";
 
 const GREEN = "#449842";
 
-export default function Carousel() {
+export default function Campaigns() {
   const [open, setOpen] = React.useState(false);
+
   const handleToggle = () => {
     setOpen(!open);
   };
+
   return (
     <Box sx={{ width: "100%", margin: "0 auto" }}>
       <Box sx={{ width: "100%", background: "", margin: "0 auto" }}>
@@ -317,7 +320,6 @@ const CampaignRow = ({ reversed, campaign }) => {
         >
           {campaign.title}
         </Typography>
-
         <Typography
           sx={{
             fontSize: "21px",
@@ -331,28 +333,35 @@ const CampaignRow = ({ reversed, campaign }) => {
         >
           {campaign.description}
         </Typography>
-        <Button
-          sx={{
-            background: "#111",
-            color: "white",
-            fontWeight: "600",
-            padding: "21px 48px",
-            margin: "21px auto",
-            transition: "800ms",
-            border: "1px solid transparent",
-            "&:hover": {
-              color: "white",
-              border: "1px solid #111",
-              backgroundImage: "url('/hover.png')",
-              backgroundSize: { xs: "cover", lg: "cover" },
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat"
-            }
-          }}
+        <Link
+          href={`/campaign/${campaign.title
+            .replaceAll(" ", "-")
+            .toLowerCase()}`}
+          as={`/campaign/${campaign.title.replaceAll(" ", "-").toLowerCase()}`}
         >
-          {" "}
-          Get Involved{" "}
-        </Button>
+          <Button
+            sx={{
+              background: "#111",
+              color: "white",
+              fontWeight: "600",
+              padding: "21px 48px",
+              margin: "21px auto",
+              transition: "800ms",
+              border: "1px solid transparent",
+              "&:hover": {
+                color: "white",
+                border: "1px solid #111",
+                backgroundImage: "url('/hover.png')",
+                backgroundSize: { xs: "cover", lg: "cover" },
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat"
+              }
+            }}
+          >
+            {" "}
+            Get Involved{" "}
+          </Button>
+        </Link>
       </Grid>
       <Grid item xs={12}>
         <Divider
