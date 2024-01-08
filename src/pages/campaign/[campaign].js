@@ -9,11 +9,12 @@ import {
   Menu,
   Tooltip,
   Paper,
-  Boxider,
+  TextField,
+  Divider,
 } from "@mui/material";
 import { Navbar } from "./../../components/main";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
-import Link from "@mui/material/Link";
+import Link from "next/link";
 
 function handleClick(event) {
   event.preventDefault();
@@ -43,26 +44,13 @@ const GetInvoldedPage = () => {
       <Box data-aos="fade-bottom" data-aos-duration={"5000"}>
         <Box
           sx={{
-            // background: currentCampaign.color,
-            height: "350px",
-            width: "100%",
-            display: "flex",
-            alignItems: "center",
-            margin: "0 auto",
-            color: "white",
+            height: { xs: "30vh", lg: "50vh" },
+            padding: "30px",
+            backgroundImage: "url('/qwaqwa-banner.jpg')",
+            backgroundSize: { xs: "cover", lg: "cover" },
+            backgroundPosition: "left center",
           }}
-        >
-          <Typography
-            sx={{
-              fontSize: "60px",
-              width: "100%",
-              fontWeight: "600",
-              textAlign: "center",
-            }}
-          >
-            {currentCampaign.title}
-          </Typography>
-        </Box>
+        />
       </Box>
       <Box sx={{ width: "90%", background: "", margin: "0 auto" }}>
         <Box
@@ -84,12 +72,186 @@ const GetInvoldedPage = () => {
             </Typography>
           </Breadcrumbs>
         </Box>
+
+        <CampaignRow campaign={currentCampaign} />
       </Box>
     </Box>
   );
 };
 
 export default GetInvoldedPage;
+
+const CampaignRow = ({ reversed, campaign }) => {
+  return (
+    <Grid
+      container
+      sx={{ display: "flex", flexDirection: reversed ? "row" : "row-reverse" }}
+    >
+      <Grid
+        item
+        xs={12}
+        lg={5}
+        sx={{
+          height: "75vh",
+          margin: "32px auto",
+          backgroundImage: `url(${campaign.image})`,
+          backgroundSize: { xs: "contain", lg: "contain" },
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      ></Grid>
+      <Grid
+        item
+        xs={12}
+        lg={5}
+        sx={{
+          height: "75vh",
+          margin: "32px auto",
+          background: "",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Typography
+          sx={{
+            fontSize: "32px",
+            width: "100%",
+            margin: "0",
+            padding: "12px 0",
+            fontWeight: "600",
+            textAlign: "center",
+            color: "#111",
+          }}
+        >
+          {campaign.title}
+        </Typography>
+        <Typography
+          sx={{
+            fontSize: "21px",
+            width: "100%",
+            margin: "0",
+            padding: "12px 0",
+            fontWeight: "300",
+            textAlign: "center",
+            color: "#111",
+          }}
+        >
+          {campaign.description}
+        </Typography>
+        <Link
+          href={`/campaign/${campaign.title
+            .replaceAll(" ", "-")
+            .toLowerCase()}`}
+          as={`/campaign/${campaign.title.replaceAll(" ", "-").toLowerCase()}`}
+        >
+          <Button
+            sx={{
+              background: "#111",
+              color: "white",
+              fontWeight: "600",
+              padding: "21px 48px",
+              margin: "21px auto",
+              transition: "800ms",
+              border: "1px solid transparent",
+              "&:hover": {
+                color: "white",
+                border: "1px solid #111",
+                backgroundImage: "url('/hover.png')",
+                backgroundSize: { xs: "cover", lg: "cover" },
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              },
+            }}
+          >
+            {" "}
+            Get Involved{" "}
+          </Button>
+        </Link>
+      </Grid>
+      <Grid item xs={12}>
+        <Divider
+          sx={{ width: "50%", margin: { xs: "21px auto", lg: "64px auto" } }}
+        />
+      </Grid>
+      <Grid
+        item
+        xs={12}
+        md={8}
+        sx={{
+          minHeight: "70vh",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "",
+          margin: "0 auto",
+          padding: { xs: "0 12px", lg: "21px 0 0 32px" },
+        }}
+      >
+        <Typography component={"label"} sx={{ textAlign: "left" }}>
+          {" "}
+          Name :{" "}
+        </Typography>
+        <TextField sx={{ ...TextStyles }} fullWidth={true} />
+        <Typography component={"label"} sx={{ textAlign: "left" }}>
+          {" "}
+          Surname :{" "}
+        </Typography>
+        <TextField sx={{ ...TextStyles }} fullWidth={true} />
+        <Typography component={"label"} sx={{ textAlign: "left" }}>
+          {" "}
+          Phone Number :{" "}
+        </Typography>
+        <TextField sx={{ ...TextStyles }} fullWidth={true} />
+        <Typography component={"label"} sx={{ textAlign: "left" }}>
+          {" "}
+          Email :{" "}
+        </Typography>
+        <TextField sx={{ ...TextStyles }} fullWidth={true} />
+        <Typography component={"label"} sx={{ textAlign: "left" }}>
+          {" "}
+          Campaign :{" "}
+        </Typography>
+        <TextField sx={{ ...TextStyles }} fullWidth={true} />
+      </Grid>
+
+      <Grid
+        item
+        xs={12}
+        md={8}
+        sx={{
+          display: "flex",
+          margin: "0 auto",
+          justifyContent: "flex-end",
+          alignItems: "center",
+        }}
+      >
+        <Button
+          sx={{
+            background: "#111",
+            color: "white",
+            fontWeight: "600",
+            padding: "21px 48px",
+            transition: "800ms",
+            margin: "21px 0",
+            border: "1px solid transparent",
+            "&:hover": {
+              color: "white",
+              border: "1px solid #111",
+              backgroundImage: "url('/hover.png')",
+              backgroundSize: { xs: "cover", lg: "cover" },
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            },
+          }}
+        >
+          {" "}
+          Get Involved{" "}
+        </Button>
+      </Grid>
+    </Grid>
+  );
+};
 
 const campaigns = [
   {
@@ -117,3 +279,7 @@ const campaigns = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk7CKU0ZRP_TxKHrRQszu9T6bjOTBWxUjVPan4otJT7g&s",
   },
 ];
+
+const TextStyles = {
+  margin: "21px 0",
+};
