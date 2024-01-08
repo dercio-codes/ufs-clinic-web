@@ -205,8 +205,9 @@ export default function Footer() {
           <Typography
             sx={{
               fontStyle: "italic",
-              width: "60%",
-              fontSize: "21px"
+              width: { xs: "85%", lg: "60%" },
+              fontSize: "21px",
+              margin: { xs: "21px auto", lg: "0" }
             }}
           >
             {" "}
@@ -250,6 +251,27 @@ export default function Footer() {
             scale: "0.7"
           }}
         ></Grid>
+        <Grid
+          item
+          xs={12}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+          <Typography
+            sx={{
+              width: { xs: "85%", lg: "60%" },
+              fontSize: "12px",
+              textAlign: "center",
+              fontWeight: "600",
+              margin: { xs: "21px auto" }
+            }}
+          >
+            {"2024 Copyright LTD"}
+          </Typography>
+        </Grid>
       </Grid>
     </Box>
   );
