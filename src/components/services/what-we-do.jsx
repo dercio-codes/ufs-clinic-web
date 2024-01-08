@@ -236,10 +236,14 @@ export default function WhatWeDo() {
 
         <Grid container sx={{ margin: "50px 0" }}>
           {sicknesses.map((item, index) => {
+            // if (
+            //   selected !== "" &&
+            //   selected.split("")[0].toUpperCase() ===
+            //     item.title.split("")[0].toUpperCase()
+            // ) {
             if (
               selected !== "" &&
-              selected.split("")[0].toUpperCase() ===
-                item.title.split("")[0].toUpperCase()
+              item.title.startsWith(selected.charAt(0).toUpperCase())
             ) {
               console.log(item.url);
               console.log(typeof item.url);
@@ -249,9 +253,9 @@ export default function WhatWeDo() {
                   xs={6}
                   md={3}
                   key={index}
-                  onClick={() => {
-                    router.push(`${item.url}`, "_blank");
-                  }}
+                  // onClick={() => {
+                  //   router.push(`${item.url}`, "_blank");
+                  // }}
                   sx={{
                     fontSize: "21px",
                     textAlign: "left",
@@ -267,7 +271,9 @@ export default function WhatWeDo() {
                   }}
                 >
                   <Box aos="fade-up" data-aos-duration="1000">
-                    {item.title}
+                    <Link href={item.url} target="_blank">
+                      {item.title}
+                    </Link>
                   </Box>
                 </Grid>
               );

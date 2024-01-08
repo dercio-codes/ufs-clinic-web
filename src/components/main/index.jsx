@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Box, Typography, Grid, Menu, Tooltip, Paper } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Grid,
+  Menu,
+  Tooltip,
+  Paper,
+  Drawer,
+  IconButton
+} from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
@@ -571,8 +580,6 @@ export const Main = () => {
         <TitleHeader text={"Frequently Asked Questions "} />
         <FrequentlyAsked />
       </Box>
-
-      <Footer />
     </Box>
   );
 };
@@ -602,14 +609,96 @@ const MenuDrop = () => {
 };
 
 export const Navbar = () => {
+  const [open, setOpen] = React.useState(false);
+
+  const handleToggle = () => {
+    setOpen(!open);
+  };
+
   return (
     <Box sx={{ width: "100%", margin: "0 auto" }}>
+      <Drawer open={open} onClose={handleToggle} anchor={"right"}>
+        <Box
+          sx={{
+            width: "300px",
+            height: "100vh",
+            background: "",
+            padding: "21px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "space-evenly"
+          }}
+        >
+          <Box
+            sx={{
+              height: "50px",
+              width: "100%",
+              marginBottom: "21px",
+              backgroundImage: "url('/qwaqwa-logo-transparent.png')",
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat"
+            }}
+          />
+
+          <NavItem
+            listItems={categoriesData}
+            page={"tips"}
+            text={"Health Tips "}
+          />
+          <NavItem listItems={false} page={"campaigns"} text={"Campaigns"} />
+          <NavItem listItems={false} page={"#what-we-do"} text={"About"} />
+          <NavItem listItems={false} page={"articles"} text={"Blog"} />
+          <NavItem listItems={false} page={"contact"} text={"contact"} />
+          <Button
+            sx={{
+              scale: "0.9",
+              color: "white",
+              padding: "16px 32px",
+              margin: "21px 0",
+              borderRadius: "32px",
+              background: "#001842",
+              "&:hover": {
+                color: "#001842"
+              }
+            }}
+          >
+            {" "}
+            BOOK APPOINTMENT{" "}
+          </Button>
+          <Box
+            sx={{
+              height: "50px",
+              width: "100%",
+              backgroundImage:
+                "url('https://www.centralbank.net/siteassets/personal/online-and-mobile-banking/google-play-badge.png?v=1D9204F9FD23900')",
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat"
+            }}
+          />
+          <Box
+            sx={{
+              height: "50px",
+              width: "100%",
+              backgroundImage:
+                "url('https://www.centralbank.net/siteassets/personal/online-and-mobile-banking/app-store-badge.svg?v=1D9204ECC398580')",
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat"
+            }}
+          />
+          <Box></Box>
+        </Box>
+      </Drawer>
       <Box sx={{ height: "5vh", background: BLUE }} />
       <Box sx={{ width: "90%", margin: "0 auto" }}>
         <Grid container>
           <Grid
             item
-            xs={2}
+            xs={4}
+            lg={2}
             sx={{
               // padding: "30px",
               // backgroundImage: "url('/qwaqwa-logo-transparent.png')",
@@ -634,12 +723,35 @@ export const Navbar = () => {
             </Link>
           </Grid>
           <Grid
+            xs={8}
+            lg={0}
+            sx={{
+              display: { xs: "flex", lg: "none" },
+              padding: "12px 0",
+              justifyContent: "flex-end"
+            }}
+          >
+            <IconButton onClick={handleToggle}>
+              <Box
+                sx={{
+                  height: "35px",
+                  width: "35px",
+                  backgroundImage:
+                    "url('https://img.icons8.com/?size=48&id=83195&format=png')",
+                  backgroundSize: "contain",
+                  backgroundPosition: "left",
+                  backgroundRepeat: "no-repeat"
+                }}
+              />
+            </IconButton>
+          </Grid>
+          <Grid
             item
             xs={10}
             sx={{
               padding: "30px",
               background: "",
-              display: "flex",
+              display: { xs: "none", lg: "flex" },
               alignItems: "center",
               justifyContent: "space-evenly"
             }}
@@ -839,7 +951,7 @@ function NavItem({ text, listItems, page }) {
           aria-haspopup="true"
           aria-expanded={open ? "true" : undefined}
           onMouseEnter={handleClick}
-          sx={{ fontSize: "12px", color: BLUE }}
+          sx={{ fontSize: "12px", color: BLUE, width: "100%" }}
         >
           {text}
         </Button>
