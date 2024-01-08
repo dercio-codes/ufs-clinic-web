@@ -106,7 +106,7 @@ export default function Contact() {
               display: "flex",
               flexDirection: "column",
               alignItems: "",
-              padding: "21px 0 0 32px"
+              padding: { xs: "0 12px", lg: "21px 0 0 32px" }
             }}
           >
             <Typography component={"label"} sx={{ textAlign: "left" }}>
