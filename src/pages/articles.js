@@ -67,7 +67,14 @@ const Articles = () => {
         <Grid container>
           {blogPosts.map((post, index) => {
             return (
-              <Grid key={index} item xs={6} lg={4} sx={{ padding: "12px" }}>
+              <Grid
+                key={index}
+                item
+                xs={12}
+                md={6}
+                lg={4}
+                sx={{ padding: "12px" }}
+              >
                 <Box data-aos="fade-right" data-aos-duration={`${index}000`}>
                   <Link
                     href={`/blog/${post.title
