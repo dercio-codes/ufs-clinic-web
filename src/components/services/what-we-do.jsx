@@ -14,9 +14,11 @@ const GREEN = "#449842";
 const BLUE = "#001842";
 const RED = "#6A2F2F";
 const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+import { useRouter } from "next/router";
 
 export default function WhatWeDo() {
   const [selected, setSelected] = useState("");
+  const router = useRouter();
 
   return (
     <Box data-aos="fade-down" data-aos-duration="1000">
@@ -202,7 +204,7 @@ export default function WhatWeDo() {
                     }
                   }}
                 >
-                  <Link>{item}</Link>
+                  {item}
                 </Typography>
               );
             } else {
@@ -237,15 +239,19 @@ export default function WhatWeDo() {
             if (
               selected !== "" &&
               selected.split("")[0].toUpperCase() ===
-                item.split("")[0].toUpperCase()
+                item.title.split("")[0].toUpperCase()
             ) {
-              console.log(item.toLowerCase().replaceAll(/ /g, "_"));
+              console.log(item.url);
+              console.log(typeof item.url);
               return (
                 <Grid
                   item
                   xs={6}
                   md={3}
                   key={index}
+                  onClick={() => {
+                    router.push(`${item.url}`, "_blank");
+                  }}
                   sx={{
                     fontSize: "21px",
                     textAlign: "left",
@@ -261,13 +267,7 @@ export default function WhatWeDo() {
                   }}
                 >
                   <Box aos="fade-up" data-aos-duration="1000">
-                    <Link
-                      to={`/https://en.wikipedia.org/wiki/${item
-                        .toLowerCase()
-                        .replaceAll(/ /g, "_")}`}
-                    >
-                      {item}
-                    </Link>
+                    {item.title}
                   </Box>
                 </Grid>
               );
@@ -471,93 +471,249 @@ const ItemSmall = ({ number, theme, image, topic, items }) => {
 };
 
 const sicknesses = [
-  "Acanthosis nigricans",
-  "Acne",
-  "Acute coronary syndrome",
-  "Acute lymphocytic leukemia",
-  "Acute myeloid leukemia",
-  "AIDS",
-  "Alcohol dependence",
-  "Alzheimer's disease",
-  "Amyotrophic lateral sclerosis",
-  "Anorexia nervosa",
-  "Anxiety disorders",
-  "Aortic aneurysm",
-  "Appendicitis",
-  "Arthritis",
-  "Asthma",
-  "Autism spectrum disorder",
-  "Bacterial meningitis",
-  "Bipolar disorder",
-  "Bronchitis",
-  "Bulimia nervosa",
-  "Cancer",
-  "Cardiomyopathy",
-  "Cerebral palsy",
-  "Chronic obstructive pulmonary disease",
-  "Cirrhosis",
-  "Colitis",
-  "Congenital heart defects",
-  "Crohn's disease",
-  "Cystic fibrosis",
-  "Dengue fever",
-  "Depression",
-  "Diabetes",
-  "Down syndrome",
-  "Ebola virus disease",
-  "Eczema",
-  "Epilepsy",
-  "Esophageal cancer",
-  "Fibromyalgia",
-  "Flu",
-  "Food poisoning",
-  "Fractures",
-  "Gastritis",
-  "Glaucoma",
-  "Gonorrhea",
-  "Heart attack",
-  "Hepatitis",
-  "Herpes",
-  "HIV infection",
-  "Huntington's disease",
-  "Inflammatory bowel disease",
-  "Influenza",
-  "Kidney disease",
-  "Leukemia",
-  "Lupus",
-  "Lyme disease",
-  "Malaria",
-  "Multiple sclerosis",
-  "Muscular dystrophy",
-  "Myocardial infarction",
-  "Obesity",
-  "Obsessive-compulsive disorder",
-  "Osteoporosis",
-  "Pancreatitis",
-  "Parkinson's disease",
-  "Pelvic inflammatory disease",
-  "Pneumonia",
-  "Post-traumatic stress disorder",
-  "Prostate cancer",
-  "Psoriasis",
-  "Psychosis",
-  "Pulmonary embolism",
-  "Rabies",
-  "Rheumatoid arthritis",
-  "Schizophrenia",
-  "Seizures",
-  "Sepsis",
-  "Sickle cell anemia",
-  "Skin cancer",
-  "Spinal cord injury",
-  "Stroke",
-  "Syphilis",
-  "Tetanus",
-  "Thalassemia",
-  "Tuberculosis",
-  "Ulcerative colitis",
-  "Urinary tract infections",
-  "Viral meningitis",
-  "West Nile virus",
-  "Zika virus disease"
+  {
+    title: "Acanthosis nigricans",
+    url: "https://en.wikipedia.org/wiki/Acanthosis_nigricans"
+  },
+  {
+    title: "Acne",
+    url: "https://en.wikipedia.org/wiki/Acne"
+  },
+  {
+    title: "Acute coronary syndrome",
+    url: "https://en.wikipedia.org/wiki/Acute_coronary_syndrome"
+  },
+  {
+    title: "Acute lymphocytic leukemia",
+    url: "https://en.wikipedia.org/wiki/Acute_lymphocytic_leukemia"
+  },
+  {
+    title: "Acute myeloid leukemia",
+    url: "https://en.wikipedia.org/wiki/Acute_myeloid_leukemia"
+  },
+  {
+    title: "AIDS",
+    url: "https://en.wikipedia.org/wiki/AIDS"
+  },
+  {
+    title: "Alcohol dependence",
+    url: "https://en.wikipedia.org/wiki/Alcohol_dependence"
+  },
+  {
+    title: "Alzheimer's disease",
+    url: "https://en.wikipedia.org/wiki/Alzheimer%27s_disease"
+  },
+  {
+    title: "Amyotrophic lateral sclerosis",
+    url: "https://en.wikipedia.org/wiki/Amyotrophic_lateral_sclerosis"
+  },
+  {
+    title: "Anorexia nervosa",
+    url: "https://en.wikipedia.org/wiki/Anorexia_nervosa"
+  },
+  {
+    title: "Anxiety disorders",
+    url: "https://en.wikipedia.org/wiki/Anxiety_disorder"
+  },
+  {
+    title: "Aortic aneurysm",
+    url: "https://en.wikipedia.org/wiki/Aortic_aneurysm"
+  },
+  {
+    title: "Appendicitis",
+    url: "https://en.wikipedia.org/wiki/Appendicitis"
+  },
+  {
+    title: "Arthritis",
+    url: "https://en.wikipedia.org/wiki/Arthritis"
+  },
+  {
+    title: "Asthma",
+    url: "https://en.wikipedia.org/wiki/Asthma"
+  },
+  {
+    title: "Autism spectrum disorder",
+    url: "https://en.wikipedia.org/wiki/Autism_spectrum_disorder"
+  },
+  {
+    title: "Bacterial meningitis",
+    url: "https://en.wikipedia.org/wiki/Bacterial_meningitis"
+  },
+  {
+    title: "Bipolar disorder",
+    url: "https://en.wikipedia.org/wiki/Bipolar_disorder"
+  },
+  { title: "Bronchitis", url: "https://en.wikipedia.org/wiki/Bronchitis" },
+  {
+    title: "Bulimia nervosa",
+    url: "https://en.wikipedia.org/wiki/Bulimia_nervosa"
+  },
+  { title: "Cancer", url: "https://en.wikipedia.org/wiki/Cancer" },
+  {
+    title: "Cardiomyopathy",
+    url: "https://en.wikipedia.org/wiki/Cardiomyopathy"
+  },
+  {
+    title: "Cerebral palsy",
+    url: "https://en.wikipedia.org/wiki/Cerebral_palsy"
+  },
+  {
+    title: "Chronic obstructive pulmonary disease",
+    url: "https://en.wikipedia.org/wiki/Chronic_obstructive_pulmonary_disease"
+  },
+  { title: "Cirrhosis", url: "https://en.wikipedia.org/wiki/Cirrhosis" },
+  { title: "Colitis", url: "https://en.wikipedia.org/wiki/Colitis" },
+  {
+    title: "Congenital heart defects",
+    url: "https://en.wikipedia.org/wiki/Congenital_heart_defect"
+  },
+  {
+    title: "Crohn's disease",
+    url: "https://en.wikipedia.org/wiki/Crohn%27s_disease"
+  },
+  {
+    title: "Cystic fibrosis",
+    url: "https://en.wikipedia.org/wiki/Cystic_fibrosis"
+  },
+  { title: "Dengue fever", url: "https://en.wikipedia.org/wiki/Dengue_fever" },
+  { title: "Depression", url: "https://en.wikipedia.org/wiki/Depression" },
+  { title: "Diabetes", url: "https://en.wikipedia.org/wiki/Diabetes" },
+  {
+    title: "Down syndrome",
+    url: "https://en.wikipedia.org/wiki/Down_syndrome"
+  },
+
+  {
+    title: "Ebola virus disease",
+    url: "https://en.wikipedia.org/wiki/Ebola_virus_disease"
+  },
+  { title: "Eczema", url: "https://en.wikipedia.org/wiki/Eczema" },
+  { title: "Epilepsy", url: "https://en.wikipedia.org/wiki/Epilepsy" },
+  {
+    title: "Esophageal cancer",
+    url: "https://en.wikipedia.org/wiki/Esophageal_cancer"
+  },
+  { title: "Fibromyalgia", url: "https://en.wikipedia.org/wiki/Fibromyalgia" },
+  { title: "Flu", url: "https://en.wikipedia.org/wiki/Influenza" },
+  {
+    title: "Food poisoning",
+    url: "https://en.wikipedia.org/wiki/Foodborne_illness"
+  },
+  { title: "Fractures", url: "https://en.wikipedia.org/wiki/Fracture" },
+  { title: "Gastritis", url: "https://en.wikipedia.org/wiki/Gastritis" },
+  { title: "Glaucoma", url: "https://en.wikipedia.org/wiki/Glaucoma" },
+  { title: "Gonorrhea", url: "https://en.wikipedia.org/wiki/Gonorrhea" },
+  { title: "Gout", url: "https://en.wikipedia.org/wiki/Gout" },
+  {
+    title: "Heart attack",
+    url: "https://en.wikipedia.org/wiki/Myocardial_infarction"
+  },
+  { title: "Hepatitis", url: "https://en.wikipedia.org/wiki/Hepatitis" },
+  { title: "Herpes", url: "https://en.wikipedia.org/wiki/Herpes_simplex" },
+  { title: "HIV infection", url: "https://en.wikipedia.org/wiki/HIV/AIDS" },
+  {
+    title: "Huntington's disease",
+    url: "https://en.wikipedia.org/wiki/Huntington%27s_disease"
+  },
+  {
+    title: "Inflammatory bowel disease",
+    url: "https://en.wikipedia.org/wiki/Inflammatory_bowel_disease"
+  },
+  { title: "Influenza", url: "https://en.wikipedia.org/wiki/Influenza" },
+  {
+    title: "Kidney disease",
+    url: "https://en.wikipedia.org/wiki/Kidney_disease"
+  },
+  { title: "Leukemia", url: "https://en.wikipedia.org/wiki/Leukemia" },
+  { title: "Lupus", url: "https://en.wikipedia.org/wiki/Lupus" },
+  { title: "Lyme disease", url: "https://en.wikipedia.org/wiki/Lyme_disease" },
+  { title: "Malaria", url: "https://en.wikipedia.org/wiki/Malaria" },
+  {
+    title: "Multiple sclerosis",
+    url: "https://en.wikipedia.org/wiki/Multiple_sclerosis"
+  },
+  {
+    title: "Muscular dystrophy",
+    url: "https://en.wikipedia.org/wiki/Muscular_dystrophy"
+  },
+  { title: "Mumps", url: "https://en.wikipedia.org/wiki/Mumps" },
+  {
+    title: "Myocardial infarction",
+    url: "https://en.wikipedia.org/wiki/Myocardial_infarction"
+  },
+  { title: "Obesity", url: "https://en.wikipedia.org/wiki/Obesity" },
+  {
+    title: "Obsessive-compulsive disorder",
+    url: "https://en.wikipedia.org/wiki/Obsessive-compulsive_disorder"
+  },
+  { title: "Osteoporosis", url: "https://en.wikipedia.org/wiki/Osteoporosis" },
+  { title: "Pancreatitis", url: "https://en.wikipedia.org/wiki/Pancreatitis" },
+  {
+    title: "Parkinson's disease",
+    url: "https://en.wikipedia.org/wiki/Parkinson%27s_disease"
+  },
+  {
+    title: "Pelvic inflammatory disease",
+    url: "https://en.wikipedia.org/wiki/Pelvic_inflammatory_disease"
+  },
+  { title: "Pneumonia", url: "https://en.wikipedia.org/wiki/Pneumonia" },
+  {
+    title: "Post-traumatic stress disorder",
+    url: "https://en.wikipedia.org/wiki/Post-traumatic_stress_disorder"
+  },
+  {
+    title: "Prostate cancer",
+    url: "https://en.wikipedia.org/wiki/Prostate_cancer"
+  },
+  { title: "Psoriasis", url: "https://en.wikipedia.org/wiki/Psoriasis" },
+  { title: "Psychosis", url: "https://en.wikipedia.org/wiki/Psychosis" },
+  {
+    title: "Pulmonary embolism",
+    url: "https://en.wikipedia.org/wiki/Pulmonary_embolism"
+  },
+  { title: "Rabies", url: "https://en.wikipedia.org/wiki/Rabies" },
+  {
+    title: "Rheumatoid arthritis",
+    url: "https://en.wikipedia.org/wiki/Rheumatoid_arthritis"
+  },
+  {
+    title: "Schizophrenia",
+    url: "https://en.wikipedia.org/wiki/Schizophrenia"
+  },
+  { title: "Seizures", url: "https://en.wikipedia.org/wiki/Seizure" },
+  { title: "Sepsis", url: "https://en.wikipedia.org/wiki/Sepsis" },
+  {
+    title: "Sickle cell anemia",
+    url: "https://en.wikipedia.org/wiki/Sickle_cell_disease"
+  },
+  { title: "Skin cancer", url: "https://en.wikipedia.org/wiki/Skin_cancer" },
+  {
+    title: "Spinal cord injury",
+    url: "https://en.wikipedia.org/wiki/Spinal_cord_injury"
+  },
+  { title: "Stroke", url: "https://en.wikipedia.org/wiki/Stroke" },
+  { title: "Syphilis", url: "https://en.wikipedia.org/wiki/Syphilis" },
+  { title: "Tetanus", url: "https://en.wikipedia.org/wiki/Tetanus" },
+  { title: "Thalassemia", url: "https://en.wikipedia.org/wiki/Thalassemia" },
+  { title: "Tuberculosis", url: "https://en.wikipedia.org/wiki/Tuberculosis" },
+  {
+    title: "Ulcerative colitis",
+    url: "https://en.wikipedia.org/wiki/Ulcerative_colitis"
+  },
+  {
+    title: "Urinary tract infections",
+    url: "https://en.wikipedia.org/wiki/Urinary_tract_infection"
+  },
+  {
+    title: "Viral meningitis",
+    url: "https://en.wikipedia.org/wiki/Viral_meningitis"
+  },
+  {
+    title: "West Nile virus",
+    url: "https://en.wikipedia.org/wiki/West_Nile_virus"
+  },
+  {
+    title: "Zika virus disease",
+    url: "https://en.wikipedia.org/wiki/Zika_virus_disease"
+  }
 ];
