@@ -40,7 +40,7 @@ export default function Contact() {
         sx={{
           width: "90%",
           background: "",
-          padding: { xs: "0 12px", lg: "0 32px" },
+          padding: { xs: "0" },
           margin: "0 auto"
         }}
       >
@@ -51,7 +51,8 @@ export default function Contact() {
             fontSize: "21px",
             color: "#111",
             fontWeight: "500",
-            textAlign: "center"
+            textAlign: "center",
+            marginBottom: "21px"
           }}
         >
           {"Fill in the form below."}
@@ -67,7 +68,7 @@ export default function Contact() {
               display: "flex",
               flexDirection: "column",
               alignItems: "",
-              padding: { xs: "0 12px", lg: "21px 0 0 32px" }
+              padding: { xs: "0 12px", lg: "21px 0px" }
             }}
           >
             <Typography component={"label"} sx={{ textAlign: "left" }}>

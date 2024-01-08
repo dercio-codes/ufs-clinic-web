@@ -64,8 +64,8 @@ const GetInvoldedPage = () => {
             <Link underline="hover" color="inherit" href="/">
               Home
             </Link>
-            <Link underline="hover" color="inherit" href="/tips">
-              Tips
+            <Link underline="hover" color="inherit" href="/campaigns">
+              Campaigns
             </Link>
             <Typography color="text.primary" sx={{ fontWeight: "600" }}>
               {currentCampaign.title}
@@ -140,35 +140,6 @@ const CampaignRow = ({ reversed, campaign }) => {
         >
           {campaign.description}
         </Typography>
-        <Link
-          href={`/campaign/${campaign.title
-            .replaceAll(" ", "-")
-            .toLowerCase()}`}
-          as={`/campaign/${campaign.title.replaceAll(" ", "-").toLowerCase()}`}
-        >
-          <Button
-            sx={{
-              background: "#111",
-              color: "white",
-              fontWeight: "600",
-              padding: "21px 48px",
-              margin: "21px auto",
-              transition: "800ms",
-              border: "1px solid transparent",
-              "&:hover": {
-                color: "white",
-                border: "1px solid #111",
-                backgroundImage: "url('/hover.png')",
-                backgroundSize: { xs: "cover", lg: "cover" },
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              },
-            }}
-          >
-            {" "}
-            Get Involved{" "}
-          </Button>
-        </Link>
       </Grid>
       <Grid item xs={12}>
         <Divider
@@ -188,6 +159,43 @@ const CampaignRow = ({ reversed, campaign }) => {
           padding: { xs: "0 12px", lg: "21px 0 0 32px" },
         }}
       >
+        <Typography
+          sx={{
+            fontSize: "32px",
+            width: "100%",
+            margin: "0",
+            padding: "12px 0",
+            fontWeight: "600",
+            textAlign: "center",
+            color: "#111",
+          }}
+        >
+          Volunteer Now
+        </Typography>
+        <Box
+          sx={{
+            height: { xs: "300px", lg: "350px" },
+            padding: "30px",
+            backgroundImage: "url('/volunteer.gif')",
+            backgroundSize: { xs: "contain" },
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+        <Typography
+          sx={{
+            fontSize: "21px",
+            width: "100%",
+            margin: "0",
+            padding: "12px 0",
+            fontWeight: "300",
+            textAlign: "center",
+            color: "#111",
+          }}
+        >
+          Fill in the form below to volunteer and assist with this campaign.
+        </Typography>
+
         <Typography component={"label"} sx={{ textAlign: "left" }}>
           {" "}
           Name :{" "}

@@ -648,9 +648,9 @@ export const Navbar = () => {
             text={"Health Tips "}
           />
           <NavItem listItems={false} page={"campaigns"} text={"Campaigns"} />
-          <NavItem listItems={false} page={"#what-we-do"} text={"About"} />
           <NavItem listItems={false} page={"articles"} text={"Blog"} />
           <NavItem listItems={false} page={"contact"} text={"contact"} />
+          <NavItem listItems={false} page={"#what-we-do"} text={"About"} />
           <Button
             sx={{
               scale: "0.9",
